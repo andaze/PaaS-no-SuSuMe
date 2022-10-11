@@ -1,0 +1,80 @@
+
+<div id="webgl" class="canvas-wrapper fixed z-10 h-full w-full">
+  
+  {{/*  <!-- ローディング画面 -->
+  <div id="loading" class="w-full h-full bg-black flex justify-center absolute z-40">
+    <div class="animate-ping h-6 w-6 bg-white rounded-full inset-y-1/2 absolute z-10 invisible" id="loading_icon"></div>
+  </div>  */}}
+
+  <!-- インタラクションガイド -->
+  <div class="absolute bottom-20 transition ease-in-out duration-[2000ms] h-12 w-screen opacity-0 invisible" id="nav_block">
+    <img src="../img/nav_char.png" alt="" class="h-6 w-56 object-cover mx-auto" id="nav_char">
+    <div class="w-48 h-full mx-auto relative" id="anime_nav">
+      <div class="h-6 w-6 top-0 left-3 bg-[url('../img/clicked.svg')] bg-cover absolute opacity-0" id="circle"></div>
+    </div>
+  </div>
+    
+</div>
+        
+          
+
+<div class="w-full h-full bg-black absolute inset-0 opacity-0 transition ease-in-out duration-300 invisible z-10" id="hidden_cover"></div>
+
+<!-- vertexShader -->
+<script id="js-vertex-shader" type="x-shader/x-vertex">
+  attribute vec3 position;
+  attribute vec3 color;
+  attribute float alpha;
+  attribute vec2 rand;
+  uniform mat4 modelViewMatrix;
+  uniform mat4 projectionMatrix;
+  uniform float u_ratio;
+  uniform float u_time;
+  uniform float u_value;
+  varying vec3 v_color;
+  varying float v_alpla;
+  vec3 finalPosition;
+
+  void main() {
+    v_color = color;
+    v_alpla = alpha;
+
+    float moveRange = 1.0;
+    float moveRandX = moveRange * sin(u_time + rand.x * rand.y * 50.0);
+    float moveRandY = moveRange * cos(u_time + rand.x * rand.y * 50.0);
+
+    vec3 vertexDirection = vec3(normalize(position.xy), 0.0);
+
+    float power = 1.0;
+    vec3 diffuse = -vertexDirection * power * u_ratio * rand.x;
+
+    finalPosition = position + vec3(moveRandX, moveRandY, 0) + diffuse;   
+
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(finalPosition, 1.0);
+    {{/*  gl_PointSize =  8.0 + u_value;  */}}
+    gl_PointSize =  7.0 + u_value;
+}
+
+</script>
+
+<!-- fragmentShader -->
+<script id="js-fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  
+  uniform sampler2D pointTexture;
+
+  varying vec3 v_color;
+  varying float v_alpla;
+
+  void main() {
+      vec2 temp = gl_PointCoord - vec2(0.5);
+      float f = dot(temp, temp);
+      if (f > 0.25 ) {
+          discard;
+      }
+
+      gl_FragColor = vec4(v_color, v_alpla);
+      gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+  }
+</script>
+

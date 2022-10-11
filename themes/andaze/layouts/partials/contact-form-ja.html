@@ -1,0 +1,224 @@
+<form class="max-w-none pt-8">
+  <div class="flex flex-wrap mb-6">
+    <div class="md:flex w-full">
+      <div class="md:w-1/4 ">
+        <label class="text-gray-700 text-sm font-medium" for="full_name">
+          姓 <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <input class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="full_name" name="full_name" type="text" placeholder="Example : 新井">
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="last_name">
+           名 <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <input class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="last_name" name="last_name" type="text" placeholder="Example : ミナ">
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="company_name">
+          会社名  <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <input class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="company_name" name="company_name" type="text" placeholder="Example : アンダース">
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="email">
+          メールアドレス  <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <input class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="email" name="email" type="text" placeholder="Example : andaze@example.com">
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="contact_number">
+          電話番号
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <input class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="contact_number" name="contact_number" type="text" placeholder="Example : 1234567890">
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="department">
+          部門 <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <select name="department" class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="department" >
+          <option class="bg-opacity-50 bg-gray-100 text-gray-500">--選択してください--</option>
+          <option value="経営全般">経営全般</option>
+          <option value="営業">営業</option>
+          <option value="マーケティング・広報・企画">マーケティング・広報・企画</option>
+          <option value="情報システム">情報システム</option>
+          <option value="人事・総務">人事・総務</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="post">
+          役職 <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <select name="post" class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" id="post" >
+          <option class="bg-opacity-50 bg-gray-100 text-gray-500">--選択してください--</option>
+          <option value="経営者・役員">経営者・役員</option>
+          <option value="部長クラス">部長クラス</option>
+          <option value="課長・係長・主任クラス">課長・係長・主任クラス</option>
+          <option value="一般社員">一般社員</option>
+          <option value="個人">個人</option>
+          <option value="学生">学生</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+    </div>
+    <div class="md:flex w-full">
+      <div class="md:w-1/4">
+        <label class="text-gray-700 text-sm font-medium" for="post">
+          お問い合わせ内容 <sup class="text-xs text-red-500">*</sup>
+          <hr class="hidden md:block mr-28 mt-2">
+        </label>
+      </div>
+      <div class="md:w-3/4">
+        <textarea
+          class="bg-opacity-50 w-full bg-gray-100 border border-white text-black  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" rows="6" name="inquiry_content" id="inquiry_content" placeholder="2,000字以内でお書きください。"></textarea>
+      </div>
+    </div>
+    <div class="w-full">
+      <div class="w-full pb-2">
+        <label class="text-gray-700 text-md">
+          個人情報利用について
+        </label>
+      </div>
+      <div class="w-full">
+        <textarea
+          class="bg-opacity-50 w-full bg-gray-100 border border-white text-gray-700  placeholder-gray-300 py-3 px-4 mb-3 focus:ring-0 focus:border-white" rows="10" name="inquiry_content" id="inquiry_content">
+          1. 事業者の氏名又は名称
+　 アンダーズ株式会社
+2. 個人情報保護管理者（若しくはその代理人）の氏名又は職名、
+　 所属及び連絡先
+      個人情報保護管理者　管理部
+      連絡先：03-3230-0401
+3. 個人情報の利用目的
+　  採用応募者の個人情報は、弊社の人事採用活動（書類審査、面接、評価、応募者への連絡等）のために利用いたします。
+4. 個人情報の第三者への提供
+　 業務担当者又は担当候補者の紹介のために、氏名、所属、業務経歴書を、直接持参するか電子メール添付(パスワード付)で、当社取引先に提供します。
+5.個人情報取扱いの委託
+　 当社は事業運営上、前項利用目的の範囲に限って個人情報を外部に委託することがあります。この場合、個人情報保護水準の高い委託先を選定し、個人情報の適正管理・機密保持についての契約を交わし、適切な管理を実施させます。
+6. 個人情報の開示等の請求
+　 ご本人様は、当社に対してご自身の個人情報の開示等（利用目的の通知、開示、内容の訂正・追加・削除、利用の停止または消去、第三者への提供の停止）に関して、下記の当社問合わせ窓口に申し出ることができます。その際、当社はお客様ご本人を確認させていただいたうえで、合理的な期間内に対応いたします。
+  【お問い合わせ窓口】
+　　アンダーズ株式会社
+個人情報問い合わせ窓口
+〒102-0083 東京都千代田区麹町2-10-3
+TEL：03-3230-0401
+　　Mail：contact@andaze.com
+　　受付時間：9:00～18:00
+　　（土・日曜日・祝日・年末年始は除く）
+7. 個人情報を提供されることの任意性について　
+　 ご本人様が当社に個人情報を提供されるかどうかは任意によるものです。 ただし、必要な項目をいただけない場合、適切な対応ができない場合があります。
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <div class="text-center pt-5 pb-2">
+    <label class="text-center text-gray-500 font-bold">
+      <input class="mr-2 leading-tight" type="checkbox" id="privacy" onclick="btnEnableDisable()">
+      <a href="#" class="text-sm no-underline">
+        個人情報利用に同意します
+      </a>
+    </label>
+  </div>
+  <div class="text-center">
+    <button type="button" class="w-64 uppercase text-sm font-bold tracking-wide bg-black hover:bg-white hover:text-black text-white p-4 border text-center focus:outline-none focus:shadow-outline opacity-50 cursor-not-allowed" id="submitButton" onclick="sendEmail()" disabled> ▶︎　同意の上、入力内容の確認
+    </button>
+  </div>
+</form>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+   function sendEmail()
+  {
+    let fName = document.getElementById('full_name').value;
+    let lName = document.getElementById('last_name').value;
+    let cName = document.getElementById('company_name').value;
+    let email = document.getElementById('email').value;
+    let contact_number = document.getElementById('contact_number').value;
+    var d = document.getElementById("department");
+    let department = d.value;
+    var p = document.getElementById("post");
+    let post =  p.value;
+    let inquiryDetials = document.getElementById('inquiry_content').value;
+
+    let body = `こんにちは <br> 以下は、お問い合わせフォームからのお問い合わせ内容です。:
+    <hr>
+    <br>
+    名 := ${fName} ${lName}, <br> 
+    会社名:= ${cName},<br> 
+    メールアドレス := ${email},<br> 
+    電話番号 := ${contact_number},<br> 
+    部門:= ${department},<br> 
+    役職:= ${post},<br> 
+    お問い合わせ内容:= ${inquiryDetials},<br>`;
+
+    let secureToken = {{ .Site.Params.emailCredential.secureToken }};
+    let bccMail = {{ .Site.Params.emailCredential.bccMail }};
+    let fromMail = {{ .Site.Params.emailCredential.fromMail }};
+
+
+    Email.send({
+      SecureToken : secureToken,
+      To : email,
+      From : fromMail,
+      Bcc : bccMail,
+      Subject : `お問い合わせフォームから ${fName} ${lName}`,
+      Body : body
+    }).then(
+      message => alert("お問い合わせフォームが送信されました")
+    );
+
+    // Email.send({
+    //   SecureToken : secureToken,
+    //   To : email,
+    //   From : fromMail,
+    //   Bcc : bccMail,
+    //   Subject : `お問い合わせフォームから ${fName} ${lName}`,
+    //   Body : body
+    // }).then(
+    //   message => alert(message)
+    // );
+  }
+  function btnEnableDisable(){
+    if(document.getElementById("privacy").checked)
+    {
+      document.getElementById("submitButton").disabled = false;
+      document.getElementById("submitButton").classList.remove("opacity-50","cursor-not-allowed");
+    }
+    else
+    {
+      document.getElementById("submitButton").disabled = true;
+      document.getElementById("submitButton").classList.add("opacity-50","cursor-not-allowed");
+    }
+  }
+</script>

@@ -1,0 +1,20 @@
+{{ $tabname:= .tabName }}
+{{ with .context.Site.GetPage "section" (.context.Section) }}
+    {{ if eq ($tabname) ("all") }}
+        {{ range .Paginator.Pages }}
+            {{ .Scratch.Set "backgroundTheme" "white" }}
+            {{ partial "molecule-section-irnews-pdf-listing.html" . }}
+            {{ .Scratch.Delete "backgroundTheme" }}
+            {{ end }}
+            <div class="pt-5 pl-10 text-center">
+                {{ partial "pagination.html" . }}
+            </div>
+    {{ end }}
+    {{ if $tabname }}
+        {{ range (where .Pages "Params.tags" "intersect" (slice $tabname)) }}
+            {{ .Scratch.Set "backgroundTheme" "white" }}
+            {{ partial "molecule-section-irnews-pdf-listing.html" . }}
+            {{ .Scratch.Delete "backgroundTheme" }}
+        {{ end }}
+    {{ end }}     
+{{ end }}

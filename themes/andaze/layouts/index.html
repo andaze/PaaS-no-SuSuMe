@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class=" h-[calc(100vh_+_20rem)] relative" id="key-visual">
+  {{- partial "top.html" . -}}
+</div>
+
+<main class="absolute z-10 w-full" id="top_main">
+  <div class="bg-black bg-opacity-0 py-20 md:py-60" id="company_section">
+    {{ if .Site.GetPage "company"}}
+      {{ .Scratch.Set "section" "company" }}
+      {{ partial "template-section-company.html" . }}
+      {{ .Scratch.Delete "section" }}
+    {{ end }}
+  </div>
+  <div class="bg-white py-20 md:py-36 lg:py-36">
+    {{ if .Site.GetPage "news"}}
+      {{ .Scratch.Set "section" "news" }}
+      {{ partial "template-section-newtopic.html" . }}
+      {{ .Scratch.Delete "section" }}
+    {{ end }}
+  </div>
+  <div class="bg-black p-1">
+    {{ if .Site.GetPage "ir"}}  
+      {{ .Scratch.Set "section" "ir" }}
+      {{ partial "template-section-irnews.html" . }}
+      {{ .Scratch.Delete "section" }}
+    {{ end }}
+
+    {{ if .Site.GetPage "services"}}
+      {{ .Scratch.Set "section" "services" }}
+      {{ partial "template-section.html" . }}
+      {{ .Scratch.Delete "section" }}
+    {{ end }}
+
+    {{ if .Site.GetPage "recruit"}}
+      {{ .Scratch.Set "section" "recruit" }}
+      {{ partial "template-section-recruit.html" . }}
+      {{ .Scratch.Delete "section" }}
+    {{ end }}
+
+  </div>
+  {{ range first 10 .Data.Pages }}
+  {{ .Render "summary" }}
+  {{ end }}
+
+</main>
+
+{{ end }}

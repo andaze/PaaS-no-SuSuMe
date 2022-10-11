@@ -1,0 +1,40 @@
+{{ if eq (.Scratch.Get "section") "news" }}
+    <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {{ with .Site.GetPage (.Scratch.Get "section") }}
+                {{ .Scratch.Set "tagName" ""}}
+                {{ if eq .Lang ("en") }}
+                    {{ .Scratch.Set "tagName" "press-release"}}
+                {{ else }}
+                    {{ .Scratch.Set "tagName" "プレスリリース"}}
+                {{ end }}
+
+                {{$tagName:= .Scratch.Get "tagName" }}
+                {{ range (where .Pages "Params.tags" "intersect" (slice $tagName)) }}
+                    {{ partial "molecule-section-newtopic-slide.html" . }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    <div class="flex justify-center md:hidden lg:hidden mt-5">
+        {{ partial "molecule-section-irnews-buttongroup.html" . }}
+    </div>
+{{ end }}
+
+{{ if eq (.Scratch.Get "section") "ir" }}
+    <div class="mt-2">
+        {{ .Scratch.Set "backgroundTheme" "black" }}
+        {{ partial "molecule-section-irnews-pdf-listing.html" . }}
+        {{ .Scratch.Delete "backgroundTheme" }}
+    </div>
+    <div class="flex justify-center md:hidden lg:hidden mt-5">
+        {{ partial "molecule-section-irnews-buttongroup.html" . }}
+    </div>
+{{ end }}
+
+{{ if eq (.Scratch.Get "section") "services" }}
+    {{ partial "organism-section-contents.html" . }}
+    <div class="flex justify-center md:hidden lg:hidden mt-5">
+        {{ partial "molecule-section-irnews-buttongroup.html" . }}
+    </div>
+{{ end }}
