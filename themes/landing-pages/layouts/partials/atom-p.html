@@ -1,0 +1,3 @@
+{{ $text := default "" (.Scratch.Get "text") }}
+<h2 class="">{{ $text }}</h2> 
+{{ .Scratch.Delete "text" }}
