@@ -2,12 +2,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ .Title }} | アンダーズ株式会社</title>
+  <title>{{ .Title }} | {{ .Site.Title | default "Example Site Title" }}</title>
   {{ hugo.Generator }}
-
-  {{- partialCached  "tailwindcss.cdn.html" . -}}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  {{- partialCached "googlefonts.html" . -}}
+  {{- partialCached "tailwindcss.postcss.html" . -}}
 </head>
