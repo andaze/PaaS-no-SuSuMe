@@ -1,20 +1,22 @@
 {{ define "main"}}
 
 <main>
-    {{/*  <div>
-        {{ partial "organism/section-foobar.html" . }}
-    </div>
-    <div>
-        {{ partial "organism/section-foobar.html" . }}
-    </div>
-    <div>
-        {{ partial "organism/section-foobar.html" . }}
-    </div>
-    <div>
-        {{ partial "organism/section-foobar.html" . }}
-    </div>
-    <div>
-        {{ partial "organism/section-foobar.html" . }}
-    </div>  */}}
+
+    {{ .Scratch.Set "class" "text-center" }}
+    {{ partial "organism/section.html" . }}
+    {{ .Scratch.Delete "class" }}
+
+    {{ .Scratch.Set "class" "text-left" }}
+    {{ partial "organism/section.html" . }}
+    {{ .Scratch.Delete "class" }}
+
+    {{ .Scratch.Set "class" "text-center" }}
+    {{ partial "organism/section.html" . }}
+    {{ .Scratch.Delete "class" }}
+
+    {{ .Scratch.Set "class" "text-center" }}
+    {{ partial "organism/section.html" . }}
+    {{ .Scratch.Delete "class" }}
+
 </main>
 {{ end }}
