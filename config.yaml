@@ -1,0 +1,4 @@
+baseURL: 'http://example.org/'
+languageCode: 'en-us'
+theme: ['landing-pages', 'andaze']
+title: 'My New Hugo Site'
