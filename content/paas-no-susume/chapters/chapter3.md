@@ -12,7 +12,7 @@ draft: false
 {{< /header >}}
 
 {{< div-container >}}
-    {{< div-title 
+    {{< div-title-with-strong 
         text="私たちは"
         strong-text="CRM会社ではありません"
     >}}
