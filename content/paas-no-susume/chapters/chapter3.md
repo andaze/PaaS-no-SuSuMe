@@ -11,7 +11,12 @@ draft: false
     >}}
 {{< /header >}}
 
-## 私たちはCRM会社ではありません
+{{< div-container >}}
+    {{< div-title 
+        text="私たちは"
+        strong-text="CRM会社ではありません"
+    >}}
+{{< /div-container >}}
 
 私たちはCRM会社ではなく、DX支援＆伴走パートナー企業です。
 私たちはクライアントの課題を解決し、IT投資を成功させることにこだわります。
