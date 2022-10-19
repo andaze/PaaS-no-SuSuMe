@@ -6,7 +6,7 @@ draft: false
 
 {{< header >}}
     {{< div-headerTexts
-        title = "CHAPTER2"
+        title = "CHAPTER6"
         text = "ライセンス料やシステム連携費用のせいで 定着もデータ活用も進まない"
     >}}
 {{< /header >}}
