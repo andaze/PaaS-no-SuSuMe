@@ -39,4 +39,6 @@ draft: false
             text = "私たちは、すでに大きく結果の出ている機能以外にも、貴社の事業とゴールに合わせたオリジナルDXをご提案いたします。"
         >}} 
     {{< /div-texts >}}
+
+    {{< picture >}}
 {{< /div-container >}}
