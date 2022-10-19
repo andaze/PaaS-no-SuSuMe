@@ -6,7 +6,7 @@ draft: false
 
 {{< header >}}
     {{< div-headerTexts
-        title = "CHAPTER2"
+        title = "CHAPTER3"
         text = "多数の案件で培ってきた知見を惜しみなくオープンソースで提供"
     >}}
 {{< /header >}}
