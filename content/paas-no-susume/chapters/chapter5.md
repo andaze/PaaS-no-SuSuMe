@@ -6,7 +6,7 @@ draft: false
 
 {{< header >}}
     {{< div-headerTexts
-        title = "CHAPTER1"
+        title = "CHAPTER5"
         text = "ビジネス戦略の修正に追従できる統合型データプラットフォーム"
     >}}
 {{< /header >}}
