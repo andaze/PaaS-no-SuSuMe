@@ -1,0 +1,3 @@
+{{ $text := default "" (.Scratch.Get "strong-text") }}
+<strong class="">{{ $text }}</strong> 
+{{ .Scratch.Delete "strong-text" }}

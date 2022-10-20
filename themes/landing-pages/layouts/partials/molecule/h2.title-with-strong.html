@@ -1,0 +1,8 @@
+{{ .Scratch.Set "text" (.Get "text") }}
+{{ .Scratch.Set "strong" (.Get "strong") }}
+<h2 class="">
+    {{ partial "atom/span.html" . }}
+    {{ partial "atom/strong.html" . }}
+</h2>
+{{ .Scratch.Delete "strong" }}
+{{ .Scratch.Delete "text" }}
