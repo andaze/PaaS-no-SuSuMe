@@ -1,3 +1,5 @@
 {{ $title := default "" (.Scratch.Get "title") }}
-<h1 class="">{{ $title }}</h1> 
+{{ $opt_class := default "" (.Scratch.Get "title-class") }}
+<h1 class="{{ $opt_class }}">{{ $title }}</h1> 
 {{ .Scratch.Delete "title" }}
+{{ .Scratch.Delete "title-class" }}

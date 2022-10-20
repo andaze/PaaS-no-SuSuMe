@@ -10,11 +10,13 @@ weight: 1
     class="bg-gray-100 text-center py-40"
 >}}
     {{< header
-        class="mb-10"
+        class="mb-10 font-bold"
     >}}
         {{< div-headerTexts
-            title = "CHAPTER1"
-            text = "必要なのは”高機能”なシステムではなく”IT投資を成功”させるシステム"
+            title="CHAPTER1"
+            title-class="mb-8"
+            text="必要なのは”高機能”なシステムではなく”IT投資を成功”させるシステム"
+            text-class="text-[36px]"
         >}}
     {{< /header >}}
 
