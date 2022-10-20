@@ -9,7 +9,9 @@ weight: 1
 {{< section
     class="bg-gray-100 text-center py-40"
 >}}
-    {{< header >}}
+    {{< header
+        class="mb-10"
+    >}}
         {{< div-headerTexts
             title = "CHAPTER1"
             text = "必要なのは”高機能”なシステムではなく”IT投資を成功”させるシステム"
