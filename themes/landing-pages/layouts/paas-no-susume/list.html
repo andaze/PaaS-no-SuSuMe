@@ -2,7 +2,7 @@
 
 <main>
 
-    {{ range (where .Site.RegularPages ".Params.isChapter" "eq" true) }}
+    {{ range (where .Site.RegularPages.ByWeight ".Params.isChapter" "eq" true) }}
         {{ .Content }}
     {{ end }}
     
