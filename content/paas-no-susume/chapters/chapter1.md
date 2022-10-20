@@ -14,9 +14,12 @@ weight: 1
     >}}
         {{< div-headerTexts
             title="CHAPTER1"
+            word1="必要なのは”高機能”なシステムではなく"
+            strong="”IT投資を成功”"
+            word2="させるシステム"
             title-class="mb-8"
-            text="必要なのは”高機能”なシステムではなく”IT投資を成功”させるシステム"
             text-class="text-[40px]"
+            strong-class="text-[56px]"
         >}}
     {{< /header >}}
 
