@@ -1,3 +1,11 @@
+{{ if .Get "text" }}
 {{ $text := default "" (.Scratch.Get "text") }}
 <p class="">{{ $text }}</p> 
 {{ .Scratch.Delete "text" }}
+{{ end }}
+
+{{ if .Get "title" }}
+{{ $title := default "" (.Scratch.Get "title") }}
+<p class="">{{ $title }}</p> 
+{{ .Scratch.Delete "title" }}
+{{ end }}
