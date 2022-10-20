@@ -1,6 +1,8 @@
 {{ if .Get "text" }}
 {{ $text := default "" (.Scratch.Get "text") }}
-<p class="">{{ $text }}</p> 
+{{ $opt_class := default "" (.Scratch.Get "text-class") }}
+<p class="{{ $opt_class }}">{{ $text }}</p> 
+{{ .Scratch.Delete "text-class" }}
 {{ .Scratch.Delete "text" }}
 {{ end }}
 
