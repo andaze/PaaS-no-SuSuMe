@@ -6,7 +6,9 @@ isChapter: true
 weight: 1
 ---
 
-{{< section >}}
+{{< section
+    class="bg-gray-100 text-center py-40"
+>}}
     {{< header >}}
         {{< div-headerTexts
             title = "CHAPTER1"
