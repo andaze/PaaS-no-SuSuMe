@@ -2,6 +2,10 @@
 
 <main>
 
+    {{ range (where .Site.RegularPages ".Params.isChapter" "eq" true) }}
+        {{ .Content }}
+    {{ end }}
+    
     {{ .Scratch.Set "class" "text-center" }}
     {{ partial "organism/section.html" . }}
     {{ .Scratch.Delete "class" }}
