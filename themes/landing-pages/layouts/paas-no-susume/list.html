@@ -2,7 +2,11 @@
 
 <main>
 
-    {{ .Scratch.Set "class" "text-center" }}
+    {{ range (where .Site.RegularPages.ByWeight ".Params.isChapter" "eq" true) }}
+        {{ .Content }}
+    {{ end }}
+    
+    {{/*  {{ .Scratch.Set "class" "text-center" }}
     {{ partial "organism/section.html" . }}
     {{ .Scratch.Delete "class" }}
 
@@ -16,7 +20,7 @@
 
     {{ .Scratch.Set "class" "text-center" }}
     {{ partial "organism/section.html" . }}
-    {{ .Scratch.Delete "class" }}
+    {{ .Scratch.Delete "class" }}  */}}
 
 </main>
 {{ end }}
