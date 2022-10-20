@@ -1,5 +1,20 @@
 {
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "autoprefixer": "project",
+      "postcss": "project",
+      "postcss-cli": "project",
+      "postcss-import": "project",
+      "prettier": "project",
+      "prettier-plugin-go-template": "project",
+      "prettier-plugin-tailwindcss": "project",
+      "tailwindcss": "project",
+      "tw-elements": "project"
+    }
+  },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.17",
     "postcss-cli": "^10.0.0",
