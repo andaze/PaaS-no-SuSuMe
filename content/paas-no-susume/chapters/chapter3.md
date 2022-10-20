@@ -28,7 +28,7 @@ draft: false
         {{< picture >}}
     {{< /div-grid-container >}}
 
-    {{< div-title.html 
+    {{< div-title
         title="クライアント先での運用から得た知見の集大成、オープンソースの「ジェネリックCRM（第三のCRM）」"
     >}}
     {{< div-texts >}}
