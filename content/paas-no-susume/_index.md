@@ -11,5 +11,5 @@ isSmtpJs: true
 <!-- title, subtitle, description, img-path -->
 
 {{< smtpjs-form >}}
-{{/*  In this area, HTML is used to describe the contents of the form  */}}
+{{< agreement-to-terms >}}
 {{< /smtpjs-form >}}
