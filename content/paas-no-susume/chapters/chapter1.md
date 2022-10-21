@@ -25,7 +25,7 @@ weight: 1
 
     {{< div-texts >}}
         {{< div-text
-            text="「PaaSのススメ」が提供しているのは、安価で融通の利くPaaSを使ったシステム構築の仕組みです。"
+            words1="「PaaSのススメ」が提供しているのは、安価で融通の利くPaaSを使ったシステム構築の仕組みです。"
             class="mb-8 text-[26px] text-[#066666] font-bold"
         >}} 
         {{< div-text
