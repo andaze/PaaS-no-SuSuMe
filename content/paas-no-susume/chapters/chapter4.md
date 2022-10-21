@@ -6,8 +6,12 @@ isChapter: true
 weight: 4
 ---
 
-{{< section >}}
-    {{< header >}}
+{{< section
+    class="text-center py-40"
+>}}
+    {{< header
+        class="mb-10 font-bold"
+    >}}
         {{< div-headerTexts
             title = "CHAPTER4"
             text = "すべての従業員がデータを活用できるシステムでデジタルトランスフォーメーションを最大化"
