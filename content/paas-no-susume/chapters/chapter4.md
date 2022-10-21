@@ -13,8 +13,13 @@ weight: 4
         class="mb-10 font-bold"
     >}}
         {{< div-headerTexts
-            title = "CHAPTER4"
-            text = "すべての従業員がデータを活用できるシステムでデジタルトランスフォーメーションを最大化"
+            title="CHAPTER4"
+            word1="データが民主化されれば、社内の誰もが"
+            strong="データに基づいた意思決定をできる"
+            word2=""
+            title-class="mb-8"
+            text-class="text-[40px]"
+            strong-class="text-[56px]"
         >}}
     {{< /header >}}
 
