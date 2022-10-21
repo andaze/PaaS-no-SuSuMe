@@ -6,8 +6,12 @@ isChapter: true
 weight: 2
 ---
 
-{{< section >}}
-    {{< header >}}
+{{< section
+    class="py-40"
+>}}
+    {{< header
+        class="mb-10 font-bold"
+    >}}
         {{< div-headerTexts
             title = "CHAPTER2"
             text = "ライセンス料やシステム連携費用のせいで 定着もデータ活用も進まない"
