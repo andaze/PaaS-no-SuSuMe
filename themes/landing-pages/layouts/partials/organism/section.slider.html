@@ -1,0 +1,5 @@
+<section class="">
+    {{ range (where .Site.RegularPages.ByWeight ".Params.isKeyVisual" "eq" true) }}
+        {{ partial "molecule/div.slide.html" . }} 
+    {{ end }}
+</section>
