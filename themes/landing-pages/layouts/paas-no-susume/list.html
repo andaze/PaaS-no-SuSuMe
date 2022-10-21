@@ -6,7 +6,9 @@
     {{ range (where .Site.RegularPages.ByWeight ".Params.isChapter" "eq" true) }}
         {{ .Content }}
     {{ end }}
-    
+        
+    {{ .Content }}
+
     {{/*  {{ .Scratch.Set "class" "text-center" }}
     {{ partial "organism/section.html" . }}
     {{ .Scratch.Delete "class" }}
