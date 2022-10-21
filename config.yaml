@@ -3,6 +3,11 @@ languageCode: 'en-us'
 theme: ['landing-pages', 'andaze']
 title: 'My New Hugo Site'
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   smtpjs:
     # secureToken: "978913ea-4f2e-4803-9ec7-05bd3fe8e6cb" # Created accounts at https://app.elasticemail.com/marketing/settings/new/manage-smtp, Encrypt at https://smtpjs.com/
