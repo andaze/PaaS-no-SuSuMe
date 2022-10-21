@@ -1,13 +1,45 @@
-{{ if .Get "text" }}
-{{ $text := default "" (.Scratch.Get "text") }}
-{{ $opt_class := default "" (.Scratch.Get "text-class") }}
-<p class="{{ $opt_class }}">{{ $text }}</p> 
-{{ .Scratch.Delete "text-class" }}
-{{ .Scratch.Delete "text" }}
-{{ end }}
+{{ if and (.Get "words1") (.Get "words2") (.Get "words3") }}
 
-{{ if .Get "title" }}
-{{ $title := default "" (.Scratch.Get "title") }}
-<p class="">{{ $title }}</p> 
-{{ .Scratch.Delete "title" }}
+    {{ .Scratch.Set "words1" (.Get "words1") }}
+    {{ .Scratch.Set "words2" (.Get "words2") }}
+    {{ .Scratch.Set "words3" (.Get "words3") }}
+
+    {{ $words1 := default "" (.Scratch.Get "words1") }}
+    {{ $words2 := default "" (.Scratch.Get "words2") }}
+    {{ $words3 := default "" (.Scratch.Get "words3") }}
+    {{ $opt_class := default "" (.Scratch.Get "text-class") }}
+
+    <p class="{{ $opt_class }}">{{ $words1 }}<br>{{ $words2 }}<br>{{ $words3 }}</p> 
+
+    {{ .Scratch.Delete "text-class" }}
+    {{ .Scratch.Delete "words3" }}
+    {{ .Scratch.Delete "words2" }}
+    {{ .Scratch.Delete "words1" }}
+
+{{ else if and (.Get "words1") (.Get "words2") }}
+
+    {{ .Scratch.Set "words1" (.Get "words1") }}
+    {{ .Scratch.Set "words2" (.Get "words2") }}
+
+    {{ $words1 := default "" (.Scratch.Get "words1") }}
+    {{ $words2 := default "" (.Scratch.Get "words2") }}
+    {{ $opt_class := default "" (.Scratch.Get "text-class") }}
+
+    <p class="{{ $opt_class }}">{{ $words1 }}<br>{{ $words2 }}</p> 
+
+    {{ .Scratch.Delete "text-class" }}
+    {{ .Scratch.Delete "words2" }}
+    {{ .Scratch.Delete "words1" }}
+
+{{ else if .Get "words1" }}
+
+    {{ .Scratch.Set "words1" (.Get "words1") }}
+
+    {{ $words1 := default "" (.Scratch.Get "words1") }}
+    {{ $opt_class := default "" (.Scratch.Get "text-class") }}
+
+    <p class="{{ $opt_class }}">{{ $words1 }}</p> 
+
+    {{ .Scratch.Delete "text-class" }}
+    {{ .Scratch.Delete "words1" }}
 {{ end }}
