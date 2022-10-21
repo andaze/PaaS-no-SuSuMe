@@ -40,16 +40,18 @@ weight: 2
         {{< div-card
             title="無駄なライセンス料"
             words1="安く見えるSaaSのユーザー利用料も、見方によっては高額。各部署に言われるままIT部門がSaaSを追加契約した企業では、ライセンス料だけでも結構な額になってしまいます。しかも、全員が機能をフル活用しているわけではないので、ユーザーごとに平準化すると、SaaSの投資対効果は決して高いとは言えません"
-            class="p-20 shadow-xl"
+            class="h-96"
             title-class="font-bold text-[28px] text-center"
             text-class="leading-7 mt-8"
+            line-class="bg-[#066666]"
         >}}
         {{< div-card
             title="無駄なシステム連携費用"
             words1="SaaS間のデータ連携は「やってみなければわからない」ことが多いため、社内にエラー対応を行う常駐エンジニアを置くなど、思わぬ人件費がかかる場合があります。また、連携ツールの利用料は処理量に応じて従量課金がきますし、データ出力料（API利用料）も予想外の金額になることがあるため、注意が必要です。"
-            class="p-20 shadow-xl"
+            class="h-96"
             title-class="font-bold text-[28px] text-center"
             text-class="leading-7 mt-8"
+            line-class="bg-[#066666]"
         >}}
     {{< /div-cards >}}
 {{< /section >}}
