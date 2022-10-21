@@ -11,5 +11,90 @@ isSmtpJs: true
 <!-- title, subtitle, description, img-path -->
 
 {{< smtpjs-form >}}
-{{/*  In this area, HTML is used to describe the contents of the form  */}}
+<!-- todo: input系(input,select,textarea) をショートコード化する -->
+<div>
+    {{< label text="姓" name="full_name" required="true" >}}
+    <input
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="full_name" name="full_name" type="text" placeholder="Example : 新井" required>
+</div>
+
+<div>
+    {{< label text="名" name="last_name" required="true" >}}
+    <input
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="last_name" name="last_name" type="text" placeholder="Example : 美奈" required>
+</div>
+
+<div>
+    {{< label text="会社名" name="company_name" required="true" >}}
+    <input
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="company_name" name="company_name" type="text" placeholder="Example : アンダース" required>
+</div>
+
+<div>
+    {{< label text="メールアドレス" name="email" required="true" >}}
+    <input
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="email" name="email" type="text" placeholder="Example : andaze@example.com" required>
+</div>
+
+<div>
+    {{< label text="電話番号" name="contact_number" >}}
+    <input
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="contact_number" name="contact_number" type="text" placeholder="Example : 1234567890">
+</div>
+
+<div>
+    {{< label text="部門" name="department" required="true" >}}
+    <select name="department"
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="department"
+        required
+    >
+        <option class="text-gray-500 bg-gray-100 bg-opacity-50" selected>--選択してください--</option>
+        <option value="経営全般">経営全般</option>
+        <option value="営業">営業</option>
+        <option value="マーケティング・広報・企画">マーケティング・広報・企画</option>
+        <option value="情報システム">情報システム</option>
+        <option value="人事・総務">人事・総務</option>
+        <option value="その他">その他</option>
+    </select>
+</div>
+
+<div>
+    {{< label text="役職" name="post" required="true" >}}
+    <select name="post"
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        id="post"
+        required
+    >
+        <option class="text-gray-500 bg-gray-100 bg-opacity-50" selected>--選択してください--</option>
+        <option value="経営者・役員">経営者・役員</option>
+        <option value="部長クラス">部長クラス</option>
+        <option value="課長・係長・主任クラス">課長・係長・主任クラス</option>
+        <option value="一般社員">一般社員</option>
+        <option value="個人">個人</option>
+        <option value="学生">学生</option>
+        <option value="その他">その他</option>
+    </select>
+</div>
+
+<div>
+    {{< label text="お問い合わせ内容" name="inquiry_content" required="true" >}}
+    <textarea
+        class="w-full px-4 py-3 mb-3 text-black placeholder-gray-300 bg-gray-100 bg-opacity-50 border border-white focus:ring-0 focus:border-white"
+        rows="6" name="inquiry_content" id="inquiry_content" placeholder="2,000字以内でお書きください。"></textarea>
+</div>
+
+{{< agreement-to-terms >}}
+
+<div>
+    <button type="submit">
+        ▶︎　同意の上、入力内容を送信
+    </button>
+</div>
+
 {{< /smtpjs-form >}}
