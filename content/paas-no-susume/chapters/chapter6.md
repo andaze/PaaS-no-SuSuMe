@@ -7,7 +7,7 @@ weight: 6
 ---
 
 {{< section
-    class="bg-gray-100 text-center py-40"
+    class="text-center py-40"
 >}}
     {{< header
         class="mb-10 font-bold"
