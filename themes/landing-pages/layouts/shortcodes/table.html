@@ -1,5 +1,8 @@
-<table>
+{{ .Scratch.Set "class" (.Get "class") }}
+{{ $opt_class := .Scratch.Get "class" }}
+<table class="{{ $opt_class }}">
     <tbody>
         {{ .Inner }} 
     </tbody>
 </table>
+{{ .Scratch.Delete "class" }}
