@@ -12,9 +12,15 @@ weight: 6
     {{< header
         class="mb-10 font-bold"
     >}}
+
         {{< div-headerTexts
-            title = "CHAPTER6"
-            text = "ライセンス料やシステム連携費用のせいで 定着もデータ活用も進まない"
+            title="CHAPTER6"
+            word1="ライセンス料やシステム連携費用のせいで"
+            strong="定着もデータ活用も進まない"
+            word2=""
+            title-class="mb-8"
+            text-class="text-[40px]"
+            strong-class="text-[56px]"
         >}}
     {{< /header >}}
 
