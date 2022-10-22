@@ -1,5 +1,3 @@
-{{ .Scratch.Set "num" (.Get "num") }}
 <div class="">
-    {{ partial "atom/p.html" . }}
+    {{ partial "atom/p.num.html" . }}
 </div>
-{{ .Scratch.Delete "num" }}
