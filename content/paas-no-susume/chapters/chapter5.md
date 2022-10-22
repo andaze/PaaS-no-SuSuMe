@@ -35,7 +35,7 @@ weight: 5
             num="02"
             title="サブシステム単位で入れ替え"
             words1="部門や業務単位でモジュールを追加することができます。各サブシステムは独立性が高く、疎結合しておけば、システムの整合性を保ちながら不要なデータを部分的に削除・改修することができます。何かあっても「パーツ交換」で済むので、メンテナンスが楽です。"
-            class="bg-white mb-8"
+            class="bg-white mb-8 float-right"
             title-class="mb-4 text-[26px] text-[#066666] font-bold"
         >}}
         {{< li-list-item 

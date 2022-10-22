@@ -1,3 +1,8 @@
-<div class="">
+{{ .Scratch.Set "num-class" (.Get "num-class") }}
+{{ $opt_class := .Scratch.Get "num-class" }}
+
+<div class="w-52 bg-white {{ $opt_class }}">
     {{ partial "atom/p.num.html" . }}
 </div>
+
+{{ .Scratch.Delete "num-class" }}
