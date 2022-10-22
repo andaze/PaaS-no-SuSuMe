@@ -13,8 +13,13 @@ weight: 5
         class="mb-10 font-bold text-center"
     >}}
         {{< div-headerTexts
-            title = "CHAPTER5"
-            text = "ビジネス戦略の修正に追従できる統合型データプラットフォーム"
+            title="CHAPTER5"
+            word1="ビジネス戦略の修正に追従できる"
+            strong="統合型データ"
+            word2="プラットフォーム"
+            title-class="mb-8"
+            text-class="text-[40px]"
+            strong-class="text-[56px]"
         >}}
     {{< /header >}}
 
