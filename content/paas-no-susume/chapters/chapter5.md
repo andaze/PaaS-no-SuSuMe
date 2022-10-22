@@ -6,8 +6,12 @@ isChapter: true
 weight: 5
 ---
 
-{{< section >}}
-    {{< header >}}
+{{< section
+    class="bg-gray-100 py-40"
+>}}
+    {{< header
+        class="mb-10 font-bold text-center"
+    >}}
         {{< div-headerTexts
             title = "CHAPTER5"
             text = "ビジネス戦略の修正に追従できる統合型データプラットフォーム"
