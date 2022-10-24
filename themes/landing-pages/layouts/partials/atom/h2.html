@@ -1,3 +1,4 @@
+{{ .Scratch.Set "title" (.Get "title") }}
 {{ .Scratch.Set "title-class" (.Get "title-class") }}
 {{ $title := default "" (.Scratch.Get "title") }}
 
