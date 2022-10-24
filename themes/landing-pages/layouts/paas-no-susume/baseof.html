@@ -6,4 +6,28 @@
         {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
     </body>
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".swiper", {
+            slidesPerView: 1,
+            loop: true,
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+                reverseDirection: false
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+              },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+        });
+    </script>
 </html>
