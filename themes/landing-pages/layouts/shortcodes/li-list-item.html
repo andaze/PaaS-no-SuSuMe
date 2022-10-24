@@ -1,4 +1,9 @@
-<li>
+{{ .Scratch.Set "class" (.Get "class") }}
+{{ $opt_class := .Scratch.Get "class" }}
+
+<li class="p-8 flex w-11/12 {{ $opt_class }}">
     {{ partial "molecule/div.num.html" . }}
     {{ partial "molecule/div.list-item-inner.html" . }}
 </li>
+
+{{ .Scratch.Delete "class" }}
