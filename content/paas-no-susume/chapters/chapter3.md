@@ -5,8 +5,12 @@ draft: false
 isChapter: true
 weight: 3
 ---
-{{< section >}}
-    {{< header >}}
+{{< section
+    class="bg-gray-100 py-40"
+>}}
+    {{< header
+        class="mb-10 text-center font-bold"
+    >}}
         {{< div-headerTexts
             title = "CHAPTER3"
             text = "多数の案件で培ってきた知見を惜しみなくオープンソースで提供"
