@@ -105,8 +105,13 @@ isSmtpJs: true
 >}}
     {{< header >}}
         {{< div-headerTexts
-            title = "FAQ"
-            text = "よくある質問"
+            title="FAQ"
+            word1="よくある質問"
+            strong=""
+            word2=""
+            title-class="mb-8"
+            text-class="text-[56px] font-bold"
+            strong-class=""
         >}}
     {{< /header >}}
 
