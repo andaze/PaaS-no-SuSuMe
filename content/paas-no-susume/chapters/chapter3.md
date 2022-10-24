@@ -25,10 +25,14 @@ weight: 3
             >}}
         {{< /header >}}
 
-        {{< div-container >}}
+        {{< div-container
+            class="bg-white pl-20 py-20 w-11/12 mr-0"
+        >}}
             {{< div-title-with-strong 
                 text="私たちは"
-                strong-text="CRM会社ではありません"
+                strong="CRM会社ではありません"
+                text-class="block font-bold text-[32px]"
+                strong-class="text-[46px] border-b-8 border-black"
             >}}
             {{< div-grid-container >}}
                 {{< div-texts >}}
