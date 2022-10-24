@@ -50,19 +50,35 @@ weight: 3
                 {{< picture >}}
             {{< /div-grid-container >}}
 
-            {{< div-title
-                title="クライアント先での運用から得た知見の集大成、オープンソースの「ジェネリックCRM（第三のCRM）」"
+            {{< div-container
+                class="w-5/6 ml-0"
             >}}
-            {{< div-texts >}}
-                {{< div-text
-                    text = "弊社では、「ジェネリックCRM」をオープンソースでご提供しています。顧客関係管理以外にも、さまざまな業務アプリケーションや情報プラットフォームを開発した実績があります。また、大手CRM製品の代替品としてご活用いただいている事例もあります。多数の企業・案件で培ってきた知見を結集した「ジェネリックCRM」。マイクロソフトAzureを活用した高機能CRMソリューションの機能をオープンソースでご提供していますので、ご利用ください。"
-                >}} 
-                {{< div-text
-                    text = "私たちは、すでに大きく結果の出ている機能以外にも、貴社の事業とゴールに合わせたオリジナルDXをご提案いたします。"
-                >}} 
-            {{< /div-texts >}}
+                {{< div-title
+                    title="クライアント先での運用から得た知見の集大成、<br>オープンソースの「ジェネリックCRM（第三のCRM）」"
+                    title-class="text-[32px] font-bold leading-relaxed mb-10"
+                >}}
+                {{< div-texts >}}
+                    {{< div-text
+                        text="弊社では、「ジェネリックCRM」をオープンソースでご提供しています。顧客関係管理以外にも、さまざまな業務アプリケーションや情報プラットフォームを開発した実績があります。"
+                        class="text-[18px] leading-9 mb-8"
+                    >}} 
+                    {{< div-text
+                        text="また、大手CRM製品の代替品としてご活用いただいている事例もあります。多数の企業・案件で培ってきた知見を結集した「ジェネリックCRM」。マイクロソフトAzureを活用した高機能CRMソリューションの機能をオープンソースでご提供していますので、ご利用ください。"
+                        class="text-[18px] leading-9 mb-8"
+                    >}} 
+                    {{< div-text
+                        text="私たちは、すでに大きく結果の出ている機能以外にも、貴社の事業とゴールに合わせたオリジナルDXをご提案いたします。"
+                        class="text-[18px] leading-9 mb-8"
+                    >}} 
+                {{< /div-texts >}}
 
-            {{< picture >}}
+                {{< picture >}}
+                {{< div-text
+                    text="ジェネリックCRM（ダッシュボード）"
+                    class="text-[18px] mt-4"
+                >}} 
+
+            {{< /div-container >}}
         {{< /div-container >}}
     {{< /div-container >}}
 {{< /section >}}
