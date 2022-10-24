@@ -3,6 +3,7 @@
     {{ .Scratch.Set "words1" (.Get "words1") }}
     {{ .Scratch.Set "words2" (.Get "words2") }}
     {{ .Scratch.Set "words3" (.Get "words3") }}
+    {{ .Scratch.Set "text-class" (.Get "text-class") }}
 
     {{ $words1 := default "" (.Scratch.Get "words1") }}
     {{ $words2 := default "" (.Scratch.Get "words2") }}
@@ -20,6 +21,7 @@
 
     {{ .Scratch.Set "words1" (.Get "words1") }}
     {{ .Scratch.Set "words2" (.Get "words2") }}
+    {{ .Scratch.Set "text-class" (.Get "text-class") }}
 
     {{ $words1 := default "" (.Scratch.Get "words1") }}
     {{ $words2 := default "" (.Scratch.Get "words2") }}
@@ -34,6 +36,7 @@
 {{ else if .Get "words1" }}
 
     {{ .Scratch.Set "words1" (.Get "words1") }}
+    {{ .Scratch.Set "text-class" (.Get "text-class") }}
 
     {{ $words1 := default "" (.Scratch.Get "words1") }}
     {{ $opt_class := default "" (.Scratch.Get "text-class") }}
