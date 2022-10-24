@@ -1,4 +1,4 @@
-<section class="">
+<section class="bg-gray-100">
     {{ range (where .Site.RegularPages.ByWeight ".Params.isFAQ" "eq" true) }}
         {{ partial "molecule/div.faq-content.html" . }} 
     {{ end }}
