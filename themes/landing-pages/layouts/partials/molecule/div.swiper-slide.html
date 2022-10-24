@@ -1,0 +1,7 @@
+<div class="swiper-slide">
+    {{ partial "molecule/div.slide-texts.html" . }} 
+
+    {{ .Scratch.Set "class" "h-[450px] w-2/3 object-cover float-right mr-20" }}
+        {{ partial "atom/atom-picture.html" . }} 
+    {{ .Scratch.Delete "class" }}
+</div>

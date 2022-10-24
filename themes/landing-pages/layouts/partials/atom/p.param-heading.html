@@ -1,1 +1,2 @@
-<p>{{ .Params.heading  | markdownify }}</p>
+{{ $class_heading := (.Scratch.Get "class-heading") }}
+<p class="{{ $class_heading }}">{{ .Params.heading  | markdownify }}</p>
