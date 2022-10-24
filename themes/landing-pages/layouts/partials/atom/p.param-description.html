@@ -1,1 +1,2 @@
-<p>{{ .Params.description }}</p>
+{{ $class_description := (.Scratch.Get "class-description") }}
+<p class="{{ $class_description }}">{{ .Params.description }}</p>
