@@ -1,11 +1,4 @@
-<div class="">
-    <div>
-        <span>Q</span>
-        <p>{{ .Params.question }}</p>
-        <span>+</span>
-    </div>
-    <div>
-        <span>Q</span>
-        <p>{{ .Params.answer }}</p>
-    </div>
+<div class="w-4/5 max-w-5xl bg-white mb-8">
+    {{ partial "molecule/div.faq-question.html" . }}
+    {{ partial "molecule/div.faq-answer.html" . }}  
 </div>
