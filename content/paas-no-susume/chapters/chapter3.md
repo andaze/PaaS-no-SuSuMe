@@ -12,8 +12,13 @@ weight: 3
         class="mb-10 text-center font-bold"
     >}}
         {{< div-headerTexts
-            title = "CHAPTER3"
-            text = "多数の案件で培ってきた知見を惜しみなくオープンソースで提供"
+            title="CHAPTER3"
+            word1="多数の案件で培ってきた知見を"
+            strong="惜しみなくオープンソースで提供"
+            word2=""
+            title-class="mb-8"
+            text-class="text-[40px]"
+            strong-class="text-[56px]"
         >}}
     {{< /header >}}
 
