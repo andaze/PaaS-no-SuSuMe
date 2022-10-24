@@ -1,7 +1,7 @@
 <section class="swiper">
     <div class="swiper-wrapper">
         {{ range (where .Site.RegularPages.ByWeight ".Params.isKeyVisual" "eq" true) }}
-            {{ partial "molecule/div.slide.html" . }} 
+            {{ partial "molecule/div.swiper-slide.html" . }} 
         {{ end }}
     </div>
 </section>

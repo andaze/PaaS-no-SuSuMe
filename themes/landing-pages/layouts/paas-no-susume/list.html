@@ -1,7 +1,7 @@
 {{ define "main"}}
 
 <main>
-    {{ partial "organism/section.slider.html" . }}
+    {{ partial "organism/section.swiper.html" . }}
 
     {{ range (where .Site.RegularPages.ByWeight ".Params.isChapter" "eq" true) }}
         {{ .Content }}
