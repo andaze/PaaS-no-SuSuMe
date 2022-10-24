@@ -1,8 +1,8 @@
-<section class="swiper w-full">
-    <div class="swiper-wrapper">
+<section class="swiper w-full mb-14 relative mt-32">
+    <div class="swiper-wrapper mb-20">
         {{ range (where .Site.RegularPages.ByWeight ".Params.isKeyVisual" "eq" true) }}
             {{ partial "molecule/div.swiper-slide.html" . }} 
         {{ end }}
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination [&>.swiper-pagination-bullet]:h-3 [&>.swiper-pagination-bullet]:w-3 [&>.swiper-pagination-bullet]:bg-[#044D4D]"></div>
 </section>
