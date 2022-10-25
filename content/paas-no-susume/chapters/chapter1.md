@@ -19,7 +19,7 @@ weight: 1
             word2="させるシステム"
             title-class="mb-8"
             text-class="text-[15px] lg:text-[40px]"
-            strong-class="text-[30px] lg:-[56px]"
+            strong-class="text-[30px] lg:text-[56px]"
         >}}
     {{< /header >}}
 
