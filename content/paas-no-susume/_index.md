@@ -100,3 +100,12 @@ isSmtpJs: true
 {{< /smtpjs-form >}}
 
 
+{{< section
+    class="bg-gray-100 lg:text-center py-20 lg:py-40 px-2"
+>}}
+    {{< header
+        class="mb-10 font-bold"
+    >}}
+    {{< /header >}}
+
+{{< /section >}}
