@@ -91,10 +91,8 @@ isSmtpJs: true
 
 {{< agreement-to-terms >}}
 
-<div>
-    <button type="submit">
-        ▶︎　同意の上、入力内容を送信
-    </button>
+<div class="text-center">
+{{< submit class="transition rounded p-5 lg:p-6 bg-[#078080] text-white hover:text-[#078080] hover:bg-white border border-[#078080]" >}}
 </div>
 
 {{< /smtpjs-form >}}
