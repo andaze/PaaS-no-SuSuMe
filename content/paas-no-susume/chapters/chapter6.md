@@ -7,7 +7,7 @@ weight: 6
 ---
 
 {{< section
-    class="text-center py-40"
+    class="lg:text-center py-20 lg:py-40 px-2"
 >}}
     {{< header
         class="mb-10 font-bold"
@@ -19,14 +19,14 @@ weight: 6
             strong="定着もデータ活用も進まない"
             word2=""
             title-class="mb-8"
-            text-class="text-[40px]"
-            strong-class="text-[56px]"
+            text-class="text-[15px] lg:text-[40px]"
+            strong-class="text-[30px] lg:text-[56px]"
         >}}
     {{< /header >}}
 
     {{< div-text
         text="DXは一時のデータ収集ではなく、継続的に新たな課題に対して改善を積み重ね、活用していくことが理想です。<br>弊社では貴社の状況や予算に合わせて、最適なご提案をいたします。"
-        class="text-[18px] leading-9"
+        class="text-[16px] lg:text-[18px] leading-9"
     >}} 
 
     {{< table 
