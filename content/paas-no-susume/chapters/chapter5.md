@@ -23,7 +23,9 @@ weight: 5
         >}}
     {{< /header >}}
 
-    {{< ul-list >}}
+    {{< ul-list 
+        class="mx-auto md:w-4/5 md:max-w-6xl"
+    >}}
         {{< li-list-item 
             num="01"
             title="ライセンス費用の大幅な削減"
