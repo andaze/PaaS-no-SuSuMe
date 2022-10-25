@@ -106,6 +106,17 @@ isSmtpJs: true
     {{< header
         class="mb-10 font-bold"
     >}}
+        {{< div-headerTexts
+            title="FAQ"
+            word1="よくある質問"
+            strong=""
+            word2=""
+            title-class="mb-8"
+            text-class="text-[15px] lg:text-[40px] font-bold"
+            strong-class=""
+        >}}
     {{< /header >}}
+
+    {{< div-faq >}}
 
 {{< /section >}}
