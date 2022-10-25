@@ -26,7 +26,7 @@ weight: 3
         {{< /header >}}
 
         {{< div-container
-            class="bg-white lg:pl-20 py-10 lg:py-20 px-2 lg:px-0 lg:w-11/12 ml-0 lg:mr-0"
+            class="bg-white lg:pl-20 py-10 lg:py-20 px-2 lg:px-0 lg:w-11/12 ml-0 lg:ml-auto lg:mr-0"
         >}}
             {{< div-title-with-strong 
                 text="私たちは"
