@@ -112,7 +112,7 @@ isSmtpJs: true
             strong=""
             word2="PDFを無料で提供しています"
             title-class="mb-8"
-            text-class="text-[15px] lg:text-[40px] font-bold"
+            text-class="text-[28px] lg:text-[40px] font-bold"
             strong-class=""
         >}}
     {{< /header >}}
@@ -134,19 +134,19 @@ isSmtpJs: true
                         class="text-[16px] lg:text-[18px] leading-9 mb-8"
                     >}} 
                     {{< ul-list 
-                        class="ml-7 mb-8"
+                        class="ml-7 mb-8 text-[16px] lg:text-[18px]"
                     >}}
                         {{< li-text 
                             text="SaaSのライセンス料を削減し、高度なデータ活用にたどりつく方法"
-                            text-class="text-[18px] list-disc mb-4"
+                            text-class="list-disc mb-4"
                         >}}
                         {{< li-text 
                             text="投資対効果が上がるPaaSデータベースの自己調達法"
-                            text-class="text-[18px] list-disc mb-4"
+                            text-class="list-disc mb-4"
                         >}}
                         {{< li-text 
                             text="ビジネスの変化に追従できるサステナブルなDXとは"
-                            text-class="text-[18px] list-disc"
+                            text-class="list-disc"
                         >}}
                     {{< /ul-list >}}
                     {{< div-text
