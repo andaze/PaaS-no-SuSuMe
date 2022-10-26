@@ -195,6 +195,18 @@ isSmtpJs: true
                 {{< picture alt="Image Not Available" src="images/ebook.png" type="content" quolity="100" class="w-2/3 mx-auto">}}
             {{< /div-grid-container >}}
 
+            {{< div-container 
+                class="bg-gray-100 pt-10 pb-20"
+            >}}
+
+                {{< div-download-form >}}
+
+                {{< div-download-button
+                    class="bg-[#078080] text-white text-[16px] lg:text-[20px]" 
+                >}}
+
+            {{< /div-container >}}
+
     {{< /div-container >}}
 
 {{< /section >}}
