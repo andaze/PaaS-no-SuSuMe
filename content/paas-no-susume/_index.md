@@ -10,6 +10,19 @@ isSmtpJs: true
 <!-- title, subtitle, description, img-path -->
 <!-- title, subtitle, description, img-path -->
 
+{{< header
+    class="my-20 font-bold text-center"
+>}}
+    {{< div-headerTexts
+        title="CONTACT"
+        word1="DXに関するご相談、ご依頼、ご質問について"
+        word2="お気軽にお問い合わせください"
+        title-class="mb-10"
+        text-class="text-[15px] lg:text-[40px]"
+        strong-class="text-[30px] lg:text-[56px]"
+    >}}
+{{< /header >}}
+
 {{< smtpjs-form >}}
 <!-- todo: input系(input,select,textarea) をショートコード化する -->
 <div>
