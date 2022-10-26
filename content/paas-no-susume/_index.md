@@ -112,6 +112,18 @@ isSmtpJs: true
 
 
 {{< section
+    class="bg-gray-100 lg:text-center py-20 lg:py-40 px-2"
+>}}
+    {{< header
+        class="mb-10 font-bold"
+    >}}
+        {{< div-headerTexts
+            title="FAQ"
+            word1="よくある質問"
+            strong=""
+            word2=""
+            title-class="mb-8"
+            text-class="text-[15px] lg:text-[40px] font-bold"
     class="bg-gray-100 py-20 lg:py-40 px-2"
 >}}
     {{< header
@@ -128,6 +140,7 @@ isSmtpJs: true
         >}}
     {{< /header >}}
 
+    {{< div-faq >}}
     {{< div-container
         class="py-10 lg:py-20 px-2 lg:px-0 lg:w-11/12 mx-auto"
     >}}
