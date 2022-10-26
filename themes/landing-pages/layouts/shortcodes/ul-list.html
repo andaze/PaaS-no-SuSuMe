@@ -1,3 +1,8 @@
-<ul class="mx-auto md:w-4/5 md:max-w-6xl">
+{{ .Scratch.Set "class" (.Get "class") }}
+{{ $opt_class := .Scratch.Get "class" }}
+
+<ul class="{{ $opt_class }}">
     {{ .Inner }} 
 </ul>
+
+{{ .Scratch.Delete "class" }}
