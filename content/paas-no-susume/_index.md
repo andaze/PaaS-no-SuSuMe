@@ -202,7 +202,7 @@ isSmtpJs: true
                 {{< div-download-form >}}
 
                 {{< div-download-button
-                    class="bg-[#078080] text-white text-[20px]" 
+                    class="bg-[#078080] text-white text-[16px] lg:text-[20px]" 
                 >}}
 
             {{< /div-container >}}
