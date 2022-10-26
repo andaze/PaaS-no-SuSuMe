@@ -7,23 +7,11 @@
         {{ .Content }}
     {{ end }}
         
-    {{ .Content }}
+    <div class="px-2 lg:w-10/12 lg: mx-auto lg:max-w-5xl">
+        {{ .Content }}
+    </div>
 
-    {{/*  {{ .Scratch.Set "class" "text-center" }}
-    {{ partial "organism/section.html" . }}
-    {{ .Scratch.Delete "class" }}
-
-    {{ .Scratch.Set "class" "text-left" }}
-    {{ partial "organism/section.html" . }}
-    {{ .Scratch.Delete "class" }}
-
-    {{ .Scratch.Set "class" "text-center" }}
-    {{ partial "organism/section.html" . }}
-    {{ .Scratch.Delete "class" }}
-
-    {{ .Scratch.Set "class" "text-center" }}
-    {{ partial "organism/section.html" . }}
-    {{ .Scratch.Delete "class" }}  */}}
+    {{ partial "organism/section.faq.html" . }}
 
 </main>
 {{ end }}

@@ -10,6 +10,19 @@ isSmtpJs: true
 <!-- title, subtitle, description, img-path -->
 <!-- title, subtitle, description, img-path -->
 
+{{< header
+    class="my-20 font-bold text-center"
+>}}
+    {{< div-headerTexts
+        title="CONTACT"
+        word1="DXに関するご相談、ご依頼、ご質問について"
+        word2="お気軽にお問い合わせください"
+        title-class="mb-10"
+        text-class="text-[15px] lg:text-[40px]"
+        strong-class="text-[30px] lg:text-[56px]"
+    >}}
+{{< /header >}}
+
 {{< smtpjs-form >}}
 <!-- todo: input系(input,select,textarea) をショートコード化する -->
 <div>
@@ -91,10 +104,8 @@ isSmtpJs: true
 
 {{< agreement-to-terms >}}
 
-<div>
-    <button type="submit">
-        ▶︎　同意の上、入力内容を送信
-    </button>
+<div class="text-center">
+{{< submit class="transition rounded p-5 lg:p-6 bg-[#078080] text-white hover:text-[#078080] hover:bg-white border border-[#078080]" >}}
 </div>
 
 {{< /smtpjs-form >}}
@@ -113,10 +124,63 @@ isSmtpJs: true
             word2=""
             title-class="mb-8"
             text-class="text-[15px] lg:text-[40px] font-bold"
+    class="bg-gray-100 py-20 lg:py-40 px-2"
+>}}
+    {{< header
+        class="mb-10 font-bold lg:text-center"
+    >}}
+        {{< div-headerTexts
+            title="無料eBook"
+            word1="PaaSによるシステムの効果と施策をまとめた"
+            strong=""
+            word2="PDFを無料で提供しています"
+            title-class="mb-8"
+            text-class="text-[28px] lg:text-[40px] font-bold"
             strong-class=""
         >}}
     {{< /header >}}
 
     {{< div-faq >}}
+    {{< div-container
+        class="py-10 lg:py-20 px-2 lg:px-0 lg:w-11/12 mx-auto"
+    >}}
+        {{< div-text
+            text="無料eBook：PaaSのススメ<br>持続可能なシステムを「安くつくる」技術（2022年度版）"
+            class="text-[16px] lg:text-[18px] font-bold leading-9 mb-8"
+        >}} 
+
+        {{< div-grid-container 
+                class="grid-cols-1 md:grid-cols-2 gap-x-4 md:gap-x-8 my-6 lg:my-10"
+            >}}
+                {{< div-texts >}}
+                    {{< div-text
+                        text="安価で融通の利くDXについて調べているものの、よくわからないと悩んでいませんか？本書は弊社がPaaSを使った「第三のCRM」でクライアントの課題を解決し、IT投資を成功させてきたノウハウをご紹介しています。"
+                        class="text-[16px] lg:text-[18px] leading-9 mb-8"
+                    >}} 
+                    {{< ul-list 
+                        class="ml-7 mb-8 text-[16px] lg:text-[18px]"
+                    >}}
+                        {{< li-text 
+                            text="SaaSのライセンス料を削減し、高度なデータ活用にたどりつく方法"
+                            text-class="list-disc mb-4"
+                        >}}
+                        {{< li-text 
+                            text="投資対効果が上がるPaaSデータベースの自己調達法"
+                            text-class="list-disc mb-4"
+                        >}}
+                        {{< li-text 
+                            text="ビジネスの変化に追従できるサステナブルなDXとは"
+                            text-class="list-disc"
+                        >}}
+                    {{< /ul-list >}}
+                    {{< div-text
+                        text="PaaSを使った「第三のCRM」の特徴と、事前に知っておいていただきたい知識などを100ページ超に渡って詳細に解説しています。ぜひ、貴社のDX化にご活用ください。"
+                        class="text-[16px] lg:text-[18px] leading-9 mb-8"
+                    >}} 
+                {{< /div-texts >}}
+                {{< picture >}}
+            {{< /div-grid-container >}}
+
+    {{< /div-container >}}
 
 {{< /section >}}
