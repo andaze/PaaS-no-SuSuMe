@@ -6,5 +6,5 @@ heading: "「DXの投資対効果を実現する<br>PaaSに自社専用データ
 description: "DX成功の第一歩は自社専用システム基盤をPaaSに安価で調達すること。SaaSやパッケージに頼ることなく、容量や機能制限のないデータベース・データレイクをPaaSに構築することで、DXの「投資対効果」を実現します。"
 isKeyVisual: true
 weight: 1
+slideImage: images/platform.jpg
 ---
-
