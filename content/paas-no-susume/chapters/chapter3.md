@@ -29,9 +29,9 @@ weight: 3
             class="bg-white lg:pl-20 py-10 lg:py-20 px-2 lg:px-0 lg:w-11/12 ml-0 lg:ml-auto lg:mr-0"
         >}}
             {{< div-title-with-strong 
-                text="私たちは"
+                text-span="私たちは"
                 strong="CRM会社ではありません"
-                text-class="block font-bold text-[22px] lg:text-[32px]"
+                span-class="block font-bold text-[22px] lg:text-[32px]"
                 strong-class="text-[25px] lg:text-[46px] border-b-4 lg:border-b-8 border-black"
             >}}
             {{< div-grid-container 

@@ -1,6 +1,6 @@
-{{ .Scratch.Set "text" (.Get "text") }}
+{{ .Scratch.Set "text-span" (.Get "text-span") }}
 {{ .Scratch.Set "strong" (.Get "strong") }}
-{{ .Scratch.Set "text-class" (.Get "text-class") }}
+{{ .Scratch.Set "span-class" (.Get "span-class") }}
 {{ .Scratch.Set "strong-class" (.Get "strong-class") }}
 
 <h2 class=" ">
@@ -9,6 +9,6 @@
 </h2>
 
 {{ .Scratch.Delete "strong-class" }}
-{{ .Scratch.Delete "text-class" }}
+{{ .Scratch.Delete "span-class" }}
 {{ .Scratch.Delete "strong" }}
-{{ .Scratch.Delete "text" }}
+{{ .Scratch.Delete "text-span" }}
