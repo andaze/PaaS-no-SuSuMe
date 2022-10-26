@@ -72,7 +72,8 @@ weight: 3
                     >}} 
                 {{< /div-texts >}}
 
-                {{< picture >}}
+                {{< picture alt="Image Not Available" src="images/dashboard.png" type="content" quolity="100">}}
+                
                 {{< div-text
                     text="ジェネリックCRM（ダッシュボード）"
                     class="text-[16px] lg:text-[18px] mt-4"
