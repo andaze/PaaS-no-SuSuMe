@@ -193,7 +193,7 @@ isSmtpJs: true
             {{< /div-grid-container >}}
 
             {{< div-container 
-                class="bg-gray-100 pt-10 pb-20"
+                class="bg-gray-100 py-10"
             >}}
 
                 {{< smtpjs-form 
