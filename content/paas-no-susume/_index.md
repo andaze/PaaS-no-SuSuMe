@@ -196,11 +196,47 @@ isSmtpJs: true
                 class="bg-gray-100 pt-10 pb-20"
             >}}
 
-                {{< div-download-form >}}
-
-                {{< div-download-button
-                    class="bg-[#078080] text-white text-[16px] lg:text-[20px]" 
+                {{< smtpjs-form 
+                    id="download_form"
                 >}}
+                    <div class="w-4/5 my-20 ml-auto mr-auto">
+
+                        <div class="lg:flex items-center justify-between text-left mb-4">
+
+                            {{< label text="お名前" name="full_name" required="false" >}}
+
+                            <input
+                            class="w-full lg:w-5/6 text-black placeholder-gray-300"
+                            id="full_name" name="お名前" type="text" placeholder="Example : 新井 美奈">
+                        </div>
+
+                        <div class="lg:flex items-center justify-between text-left mb-4">
+
+                            {{< label text="会社名" name="company_name" required="false" >}}
+
+                            <input
+                            class="w-full lg:w-5/6 text-black placeholder-gray-300"
+                            id="company_name" name="会社名" type="text" placeholder="Example : アンダース">
+
+                        </div>
+
+                        <div class="lg:flex items-center justify-between text-left">
+
+                            {{< label text="メールアドレス" name="email" required="false" >}}
+
+                            <input
+                            class="w-full lg:w-5/6 text-black placeholder-gray-300"
+                            id="email" name="email" type="text" placeholder="Example : andaze@example.com">
+                        </div>
+
+                        {{< div-download-button
+                            class="bg-[#078080] text-white text-[16px] lg:text-[20px]" 
+                        >}}
+
+                    </div>
+                {{< /smtpjs-form >}}
+
+ 
 
             {{< /div-container >}}
 
