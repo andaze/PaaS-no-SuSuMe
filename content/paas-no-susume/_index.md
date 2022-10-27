@@ -203,7 +203,7 @@ isSmtpJs: true
 
                         <div class="lg:flex items-center justify-between text-left mb-4">
 
-                            {{< label text="お名前" name="full_name" required="false" >}}
+                            {{< label text="お名前" name="full_name" required=false >}}
 
                             <input
                             class="w-full lg:w-5/6 text-black placeholder-gray-300"
@@ -212,7 +212,7 @@ isSmtpJs: true
 
                         <div class="lg:flex items-center justify-between text-left mb-4">
 
-                            {{< label text="会社名" name="company_name" required="false" >}}
+                            {{< label text="会社名" name="company_name" required=false >}}
 
                             <input
                             class="w-full lg:w-5/6 text-black placeholder-gray-300"
@@ -222,7 +222,7 @@ isSmtpJs: true
 
                         <div class="lg:flex items-center justify-between text-left">
 
-                            {{< label text="メールアドレス" name="email" required="false" >}}
+                            {{< label text="メールアドレス" name="email" required=false >}}
 
                             <input
                             class="w-full lg:w-5/6 text-black placeholder-gray-300"
@@ -230,7 +230,7 @@ isSmtpJs: true
                         </div>
 
                         {{< div-download-button
-                            class="bg-[#078080] text-white text-[16px] lg:text-[20px]" 
+                            class="bg-[#078080] text-white text-[16px] lg:text-[20px] inline-block mt-10" 
                         >}}
 
                     </div>
