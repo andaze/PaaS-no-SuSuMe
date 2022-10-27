@@ -4,9 +4,12 @@
 
 {{ .Scratch.Set "id" (.Get "id") }}
 {{ $id_name := .Scratch.Get "id" }}
+{{ .Scratch.Set "class" (.Get "class") }}
+{{ $class_name := .Scratch.Get "class" }}
 
-<form class="smtpjs-form" id="{{ $id_name }}">
+<form class="smtpjs-form {{ $class_name }}" id="{{ $id_name }}">
     {{ .Inner }}
 </form>
 
 {{ .Scratch.Delete "id" }}
+{{ .Scratch.Delete "class" }}

@@ -198,6 +198,7 @@ isSmtpJs: true
 
                 {{< smtpjs-form 
                     id="download_form"
+                    class="download"
                 >}}
                     <div class="w-4/5 my-20 ml-auto mr-auto">
 
