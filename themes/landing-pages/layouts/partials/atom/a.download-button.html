@@ -1,9 +1,6 @@
 {{ .Scratch.Set "class" (.Get "class") }}
 {{ $opt_class := .Scratch.Get "class" }}
-{{/*  <button type="submit" class="{{ $opt_class }}">
-    無料ダウンロードする
-</button>  */}}
-<a href="https://github.com/andaze/WebCorporate/files/9703731/DX.8.11.pdf" onclick="document.getElementById('download_form').submit">無料ダウンロードする</a>
-{{/*  <a href="https://github.com/andaze/WebCorporate/files/9703731/DX.8.11.pdf" download class="{{ $opt_class }} p-5">無料ダウンロードする</a>  */}}
+
+<a href="https://github.com/andaze/WebCorporate/files/9703731/DX.8.11.pdf" download class="{{ $opt_class }} p-5" id="download_btn">無料ダウンロードする</a>
 
 {{ .Scratch.Delete "class" }}
