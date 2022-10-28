@@ -1,2 +1,16 @@
-<header>
+<header class="fixed inset-0 bg-white z-50 h-fit">
+    <div class="container xl:!max-w-[1440px] mx-auto flex justify-between">
+        <div class="text-[30px] leading-[2.5] font-bold ml-8">Paasのススメ</div>
+        <a href="#" class="bg-black flex items-center py-6 px-12">
+            {{ .Scratch.Set "class" "h-6 w-6 mr-4" }}
+            {{ .Scratch.Set "src" .Site.Params.contactIcon }}
+        
+                {{ partial "atom/atom-picture.html" . }} 
+        
+            {{ .Scratch.Delete "src" }}
+            {{ .Scratch.Delete "class" }}
+
+            <span class="text-white text-[15px]">お問い合わせ</span>
+        </a>
+    </div>
 </header>
