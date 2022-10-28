@@ -17,27 +17,27 @@
         {{ if and (.Scratch.Get "text1") (.Scratch.Get "link1") }}
             {{ $text1 := .Scratch.Get "text1" }}
             {{ $link1 := .Scratch.Get "link1" }}
-            <li><a href="{{ $link1 }}">{{ $text1 }}</a></li>
+            <li><a href="{{ $link1 }}" target="_blank" rel="noopener noreferrer">{{ $text1 }}</a></li>
         {{ end }}
         {{ if and (.Scratch.Get "text2") (.Scratch.Get "link2") }}
             {{ $text2 := .Scratch.Get "text2" }}
             {{ $link2 := .Scratch.Get "link2" }}
-            <li><a href="{{ $link2 }}">{{ $text2 }}</a></li>
+            <li><a href="{{ $link2 }}" target="_blank" rel="noopener noreferrer">{{ $text2 }}</a></li>
         {{ end }}
         {{ if and (.Scratch.Get "text3") (.Scratch.Get "link3") }}
             {{ $text3 := .Scratch.Get "text3" }}
             {{ $link3 := .Scratch.Get "link3" }}
-            <li><a href="{{ $link3 }}">{{ $text3 }}</a></li>
+            <li><a href="{{ $link3 }}" target="_blank" rel="noopener noreferrer">{{ $text3 }}</a></li>
         {{ end }}
         {{ if and (.Scratch.Get "text4") (.Scratch.Get "link4") }}
             {{ $text4 := .Scratch.Get "text4" }}
             {{ $link4 := .Scratch.Get "link4" }}
-            <li><a href="{{ $link4 }}">{{ $text4 }}</a></li>
+            <li><a href="{{ $link4 }}" target="_blank" rel="noopener noreferrer">{{ $text4 }}</a></li>
         {{ end }}
         {{ if and (.Scratch.Get "text5") (.Scratch.Get "link5") }}
             {{ $text5 := .Scratch.Get "text5" }}
             {{ $link5 := .Scratch.Get "link5" }}
-            <li><a href="{{ $link5 }}">{{ $text5 }}</a></li>
+            <li><a href="{{ $link5 }}" target="_blank" rel="noopener noreferrer">{{ $text5 }}</a></li>
         {{ end }}
     </ul>
 </nav>
