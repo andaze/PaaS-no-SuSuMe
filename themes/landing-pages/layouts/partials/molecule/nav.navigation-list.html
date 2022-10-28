@@ -1,55 +1,14 @@
 {{ .Scratch.Set "ul-class" "flex justify-between gap-x-8 font-bold" }}
 {{ $ul_class := .Scratch.Get "ul-class" }}
 
-{{ .Scratch.Set "text1" .Site.Params.navigation.item1.text }}
-{{ .Scratch.Set "link1" .Site.Params.navigation.item1.link }}
-{{ .Scratch.Set "text2" .Site.Params.navigation.item2.text }}
-{{ .Scratch.Set "link2" .Site.Params.navigation.item2.link }}
-{{ .Scratch.Set "text3" .Site.Params.navigation.item3.text }}
-{{ .Scratch.Set "link3" .Site.Params.navigation.item3.link }}
-{{ .Scratch.Set "text4" .Site.Params.navigation.item4.text }}
-{{ .Scratch.Set "link4" .Site.Params.navigation.item4.link }}
-{{ .Scratch.Set "text5" .Site.Params.navigation.item5.text }}
-{{ .Scratch.Set "link5" .Site.Params.navigation.item5.link }}
-
 <nav>
     <ul class="{{ $ul_class }}">
-        {{ if and (.Scratch.Get "text1") (.Scratch.Get "link1") }}
-            {{ $text1 := .Scratch.Get "text1" }}
-            {{ $link1 := .Scratch.Get "link1" }}
-            <li><a href="{{ $link1 }}" target="_blank" rel="noopener noreferrer">{{ $text1 }}</a></li>
-        {{ end }}
-        {{ if and (.Scratch.Get "text2") (.Scratch.Get "link2") }}
-            {{ $text2 := .Scratch.Get "text2" }}
-            {{ $link2 := .Scratch.Get "link2" }}
-            <li><a href="{{ $link2 }}" target="_blank" rel="noopener noreferrer">{{ $text2 }}</a></li>
-        {{ end }}
-        {{ if and (.Scratch.Get "text3") (.Scratch.Get "link3") }}
-            {{ $text3 := .Scratch.Get "text3" }}
-            {{ $link3 := .Scratch.Get "link3" }}
-            <li><a href="{{ $link3 }}" target="_blank" rel="noopener noreferrer">{{ $text3 }}</a></li>
-        {{ end }}
-        {{ if and (.Scratch.Get "text4") (.Scratch.Get "link4") }}
-            {{ $text4 := .Scratch.Get "text4" }}
-            {{ $link4 := .Scratch.Get "link4" }}
-            <li><a href="{{ $link4 }}" target="_blank" rel="noopener noreferrer">{{ $text4 }}</a></li>
-        {{ end }}
-        {{ if and (.Scratch.Get "text5") (.Scratch.Get "link5") }}
-            {{ $text5 := .Scratch.Get "text5" }}
-            {{ $link5 := .Scratch.Get "link5" }}
-            <li><a href="{{ $link5 }}" target="_blank" rel="noopener noreferrer">{{ $text5 }}</a></li>
+        {{ range $elem_index, $elem_val := .Site.Params.navigation }}
+            {{ if (and (isset $elem_val "text") (isset $elem_val "link") ) }}
+                <li><a href="{{ index $elem_val "link" }}" target="_blank" rel="noopener noreferrer">{{ index $elem_val "text" }}</a></li>
+            {{ end }}
         {{ end }}
     </ul>
 </nav>
 
-{{ .Scratch.Delete "link5" }}
-{{ .Scratch.Delete "text5" }}
-{{ .Scratch.Delete "link4" }}
-{{ .Scratch.Delete "text4" }}
-{{ .Scratch.Delete "link3" }}
-{{ .Scratch.Delete "text3" }}
-{{ .Scratch.Delete "link2" }}
-{{ .Scratch.Delete "text2" }}
-{{ .Scratch.Delete "link1" }}
-{{ .Scratch.Delete "text1" }}
 {{ .Scratch.Delete "ul-class" }}

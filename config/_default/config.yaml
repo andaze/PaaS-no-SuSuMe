@@ -18,19 +18,8 @@ params:
       alert: "お問い合わせいただきありがとうざいます。"
       bodyHeader: "お問い合わせいただきありがとうざいます。"
       bodyFooter: "上記の内容にてお問い合わせを受け付けました。<br/>追って担当者から回答させていただきます。"
-  navigation: 
-    item1:
-      text: "個人情報保護方針"
+  navigation:
+    - text: "個人情報保護方針"
       link: "https://andaze.com/ja/privacy-policy/"
-    item2:
-      text: "会社案内"
+    - text: "会社案内"
       link: "https://andaze.com/ja/company/about/"
-    item3:
-      text: ""
-      link: ""
-    item4:
-      text: ""
-      link: ""
-    item5:
-      text: ""
-      link: ""
