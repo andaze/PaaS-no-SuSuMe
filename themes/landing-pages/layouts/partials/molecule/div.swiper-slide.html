@@ -1,7 +1,7 @@
 <div class="swiper-slide">
     {{ partial "molecule/div.slide-texts.html" . }} 
 
-    {{ .Scratch.Set "class" "w-2/3 object-cover aspect-video float-right mr-20" }}
+    {{ .Scratch.Set "class" "w-full lg:w-2/3 object-cover aspect-video mr-20 lg:mr-0 lg:ml-auto" }}
     {{ .Scratch.Set "src" .Params.slideImage }}
 
         {{ partial "atom/atom-picture.html" . }} 
