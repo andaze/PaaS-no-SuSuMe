@@ -11,6 +11,7 @@ isSmtpJs: true
 <!-- title, subtitle, description, img-path -->
 {{< section
     class="py-20 lg:py-40 px-2 lg:w-10/12 lg mx-auto lg:max-w-5xl"
+    id="contact-section"
 >}}
     {{< header
         class="my-20 font-bold text-center"
