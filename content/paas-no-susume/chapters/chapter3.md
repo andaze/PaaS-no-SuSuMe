@@ -6,7 +6,7 @@ isChapter: true
 weight: 3
 ---
 {{< section
-    class="lg:flex lg:justify-end"
+    class="lg:flex lg:justify-end xl:max-w-7xl xl:mx-auto"
 >}}
     {{< div-container 
         class="bg-gray-100 py-20 lg:py-40 w-full max-w-none lg:w-11/12 lg:max-w-7xl lg:mx-0"
