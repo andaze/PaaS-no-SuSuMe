@@ -1,16 +1,16 @@
 {{ .Scratch.Set "ul-class" "flex justify-between gap-x-8 font-bold" }}
 {{ $ul_class := .Scratch.Get "ul-class" }}
 
-{{ .Scratch.Set "text1" "個人情報保護方針" }}
-{{ .Scratch.Set "link1" "#" }}
-{{ .Scratch.Set "text2" "会社案内" }}
-{{ .Scratch.Set "link2" "#" }}
-{{ .Scratch.Set "text3" "" }}
-{{ .Scratch.Set "link3" "" }}
-{{ .Scratch.Set "text4" "" }}
-{{ .Scratch.Set "link4" "" }}
-{{ .Scratch.Set "text5" "" }}
-{{ .Scratch.Set "link5" "" }}
+{{ .Scratch.Set "text1" .Site.Params.navigation.item1.text }}
+{{ .Scratch.Set "link1" .Site.Params.navigation.item1.link }}
+{{ .Scratch.Set "text2" .Site.Params.navigation.item2.text }}
+{{ .Scratch.Set "link2" .Site.Params.navigation.item2.link }}
+{{ .Scratch.Set "text3" .Site.Params.navigation.item3.text }}
+{{ .Scratch.Set "link3" .Site.Params.navigation.item3.link }}
+{{ .Scratch.Set "text4" .Site.Params.navigation.item4.text }}
+{{ .Scratch.Set "link4" .Site.Params.navigation.item4.link }}
+{{ .Scratch.Set "text5" .Site.Params.navigation.item5.text }}
+{{ .Scratch.Set "link5" .Site.Params.navigation.item5.link }}
 
 <nav>
     <ul class="{{ $ul_class }}">
