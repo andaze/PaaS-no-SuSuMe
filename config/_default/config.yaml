@@ -21,7 +21,7 @@ params:
   navigation: 
     item1:
       text: "個人情報保護方針"
-      link: "https://andaze.com/ja/policy/"
+      link: "https://andaze.com/ja/privacy-policy/"
     item2:
       text: "会社案内"
       link: "https://andaze.com/ja/company/about/"
