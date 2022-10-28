@@ -1,0 +1,55 @@
+{{ .Scratch.Set "ul-class" "flex justify-between gap-x-8 font-bold" }}
+{{ $ul_class := .Scratch.Get "ul-class" }}
+
+{{ .Scratch.Set "text1" "個人情報保護方針" }}
+{{ .Scratch.Set "link1" "#" }}
+{{ .Scratch.Set "text2" "会社案内" }}
+{{ .Scratch.Set "link2" "#" }}
+{{ .Scratch.Set "text3" "" }}
+{{ .Scratch.Set "link3" "" }}
+{{ .Scratch.Set "text4" "" }}
+{{ .Scratch.Set "link4" "" }}
+{{ .Scratch.Set "text5" "" }}
+{{ .Scratch.Set "link5" "" }}
+
+<nav>
+    <ul class="{{ $ul_class }}">
+        {{ if and (.Scratch.Get "text1") (.Scratch.Get "link1") }}
+            {{ $text1 := .Scratch.Get "text1" }}
+            {{ $link1 := .Scratch.Get "link1" }}
+            <li><a href="{{ $link1 }}">{{ $text1 }}</a></li>
+        {{ end }}
+        {{ if and (.Scratch.Get "text2") (.Scratch.Get "link2") }}
+            {{ $text2 := .Scratch.Get "text2" }}
+            {{ $link2 := .Scratch.Get "link2" }}
+            <li><a href="{{ $link2 }}">{{ $text2 }}</a></li>
+        {{ end }}
+        {{ if and (.Scratch.Get "text3") (.Scratch.Get "link3") }}
+            {{ $text3 := .Scratch.Get "text3" }}
+            {{ $link3 := .Scratch.Get "link3" }}
+            <li><a href="{{ $link3 }}">{{ $text3 }}</a></li>
+        {{ end }}
+        {{ if and (.Scratch.Get "text4") (.Scratch.Get "link4") }}
+            {{ $text4 := .Scratch.Get "text4" }}
+            {{ $link4 := .Scratch.Get "link4" }}
+            <li><a href="{{ $link4 }}">{{ $text4 }}</a></li>
+        {{ end }}
+        {{ if and (.Scratch.Get "text5") (.Scratch.Get "link5") }}
+            {{ $text5 := .Scratch.Get "text5" }}
+            {{ $link5 := .Scratch.Get "link5" }}
+            <li><a href="{{ $link5 }}">{{ $text5 }}</a></li>
+        {{ end }}
+    </ul>
+</nav>
+
+{{ .Scratch.Delete "link5" }}
+{{ .Scratch.Delete "text5" }}
+{{ .Scratch.Delete "link4" }}
+{{ .Scratch.Delete "text4" }}
+{{ .Scratch.Delete "link3" }}
+{{ .Scratch.Delete "text3" }}
+{{ .Scratch.Delete "link2" }}
+{{ .Scratch.Delete "text2" }}
+{{ .Scratch.Delete "link1" }}
+{{ .Scratch.Delete "text1" }}
+{{ .Scratch.Delete "ul-class" }}
