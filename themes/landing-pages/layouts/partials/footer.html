@@ -1,3 +1,17 @@
 <footer>
+    <div class="lg:w-4/5 lg:max-w-5xl mx-auto flex flex-col gap-y-8 md:gap-y-0 md:flex-row justify-between items-center py-10">
+        <div class="text-[20px] md:text-[30px] font-bold pl-4 md:ml-8">Paasのススメ</div>
+
+        {{ partial "molecule/nav.navigation-list.html" . }}
+    </div>
+
+    {{ .Scratch.Set "text-small" "All Rights Reserved,Copyright（C）2022 Paasのススメ | Andaze Ltd." }}
+    {{ .Scratch.Set "small-class" "bg-black text-white text-center" }}
+
+        {{ partial "molecule/div.small.html" . }}
+
+    {{ .Scratch.Delete "text-small" }}
+    {{ .Scratch.Delete "small-class" }}
+
 </footer>
 {{ partial "smtpjs.html" . }}
