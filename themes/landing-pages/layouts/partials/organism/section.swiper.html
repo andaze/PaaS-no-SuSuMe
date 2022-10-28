@@ -1,4 +1,4 @@
-<section class="swiper h-[80vh] max-h-[600px] lg:h-auto lg:max-h-none xl:max-w-7xl xl:mx-auto w-full mb-14 relative mt-20 lg:mt-32">
+<section class="swiper h-[80vh] max-h-[600px] lg:h-auto lg:max-h-none lg:max-w-6xl 2xl:max-w-7xl lg:!ml-0 lg:!mr-auto 2xl:!mx-auto w-full mb-14 relative mt-20 lg:mt-32">
     <div class="swiper-wrapper mb-20 !h-1/2 lg:h-auto">
         {{ range (where .Site.RegularPages.ByWeight ".Params.isKeyVisual" "eq" true) }}
             {{ partial "molecule/div.swiper-slide.html" . }} 
