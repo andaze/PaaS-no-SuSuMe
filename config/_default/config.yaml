@@ -1,7 +1,10 @@
 baseURL: 'http://example.org/'
-languageCode: 'en-us'
+languageCode: 'ja-JP'
 theme: ['landing-pages', 'andaze']
-title: 'My New Hugo Site'
+title: 'アンダーズ株式会社'
+
+
+
 
 markup:
   goldmark:
@@ -9,6 +12,7 @@ markup:
       unsafe: true
 
 params:
+  contactIcon: "images/envelope.png"
   smtpjs:
     secureToken: 22152f6c-a021-4af1-90d4-cd093adb07c0 # dev,localhost
     fromMail: "contact@andaze.com"
@@ -23,3 +27,8 @@ params:
       alert: "ダウンロードいただきありがとうざいます。"
       bodyHeader: "ダウンロードいただきありがとうざいます。"
       bodyFooter: "今後とも「PaaSのススメ」をよろしくお願いいたします。"
+    navigation:
+      - text: "個人情報保護方針"
+        link: "https://andaze.com/ja/privacy-policy/"
+      - text: "会社案内"
+        link: "https://andaze.com/ja/company/about/"
