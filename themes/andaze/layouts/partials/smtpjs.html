@@ -8,14 +8,7 @@
         const adminMail = '{{- .Site.Params.smtpjs.adminMail | default false -}}';
         const bccMail = '{{- .Site.Params.smtpjs.bccMail | default false -}}';
         const fromMail = '{{- .Site.Params.smtpjs.fromMail | default false -}}';
-        const subject = '{{- .Site.Params.smtpjs.subject -}}';
-        const alertMessage = '{{- .Site.Params.smtpjs.confirmMessage.alert -}}';
-        const bodyHeader = '{{- .Site.Params.smtpjs.confirmMessage.bodyHeader -}}';
-        const bodyFooter = '{{- .Site.Params.smtpjs.confirmMessage.bodyFooter -}}';
-        
-        const alertMessage_download = '{{- .Site.Params.smtpjs.confirmMessage.alert_download -}}';
-        const bodyHeader_download = '{{- .Site.Params.smtpjs.confirmMessage.bodyHeader_download -}}';
-        const bodyFooter_download = '{{- .Site.Params.smtpjs.confirmMessage.bodyFooter_download -}}';
+        let subject, alertMessage, bodyHeader, bodyFooter;
 
         forms.forEach(function (form) {
             form.addEventListener("submit", function (e) {
@@ -31,10 +24,17 @@
                     }
                 }
                 if (form.classList.contains('download')) {
-                    submitted(toEmail, `${bodyHeader_download}<br/>${bodyMain}<br/>${bodyFooter_download}`, alertMessage_download);
+                    subject = '{{- .Site.Params.smtpjs.messagesDownload.subject -}}';
+                    alertMessage = '{{- .Site.Params.smtpjs.messagesDownload.alert -}}';
+                    bodyHeader = '{{- .Site.Params.smtpjs.messagesDownload.bodyHeader -}}';
+                    bodyFooter = '{{- .Site.Params.smtpjs.messagesDownload.bodyFooter -}}';
                 } else {
-                    submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage);
+                    subject = '{{- .Site.Params.smtpjs.messagesContact.subject -}}';
+                    alertMessage = '{{- .Site.Params.smtpjs.messagesContact.alert -}}';
+                    bodyHeader = '{{- .Site.Params.smtpjs.messagesContact.bodyHeader -}}';
+                    bodyFooter = '{{- .Site.Params.smtpjs.messagesContact.bodyFooter -}}';
                 }
+                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage);
             })
         });
 
