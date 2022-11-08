@@ -116,21 +116,27 @@ isSmtpJs: true
 {{< section
     class="bg-gray-100 lg:text-center py-20 lg:py-40 px-2"
 >}}
-    {{< header
-        class="mb-10 font-bold"
+    {{< div-container 
+        class="lg:w-10/12 lg mx-auto lg:max-w-5xl"
     >}}
-        {{< div-headerTexts
-            title="FAQ"
-            word1="よくある質問"
-            strong=""
-            word2=""
-            title-class="mb-8"
-            text-class="text-[15px] lg:text-[40px] font-bold"
-            class="bg-gray-100 py-20 lg:py-40 px-2"
-        >}}
-    {{< /header >}}
 
-    {{< div-faq >}}
+        {{< header
+            class="mb-10 font-bold"
+        >}}
+            {{< div-headerTexts
+                title="FAQ"
+                word1="よくある質問"
+                strong=""
+                word2=""
+                title-class="mb-8"
+                text-class="text-[15px] lg:text-[40px] font-bold"
+                class="bg-gray-100 py-20 lg:py-40 px-2"
+            >}}
+        {{< /header >}}
+
+        {{< div-faq >}}
+
+    {{< /div-container >}}
 
 {{< /section >}}
 
