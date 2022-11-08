@@ -1,6 +1,6 @@
 {{ .Scratch.Set "class" (.Get "class") }}
 {{ $opt_class := .Scratch.Get "class" }}
-<a class="{{ $opt_class }} p-5 multi-download">無料ダウンロードする</a>
+<a class="{{ $opt_class }} p-5 multi-download cursor-pointer">無料ダウンロードする</a>
 {{ .Scratch.Delete "class" }}
 
 {{ $built := resources.Get "js/download.js" }}
