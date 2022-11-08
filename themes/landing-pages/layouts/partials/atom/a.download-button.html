@@ -3,7 +3,5 @@
 <a class="{{ $opt_class }} p-5 multi-download cursor-pointer">無料ダウンロードする</a>
 {{ .Scratch.Delete "class" }}
 
-<button id="download-button" data-files="unicorn.jpg rainbow.jpg">Download</button>
-
-{{ $built := resources.Get "js/download.js" }}
-<script type="text/javascript" src="{{ $built.RelPermalink }}"></script>
+<button id="download-button" data-files="/pdf/Generic.CRM.2023.1.pdf /pdf/PaaS.2022.pdf">Download</button>
+{{/*  todo: data-files は permalink で引っ張るほうがいいだろう。あとはファイル更新したいときを考慮できてればばっちり  */}}
