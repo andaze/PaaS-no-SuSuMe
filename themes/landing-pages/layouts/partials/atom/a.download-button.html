@@ -3,5 +3,7 @@
 <a class="{{ $opt_class }} p-5 multi-download cursor-pointer">無料ダウンロードする</a>
 {{ .Scratch.Delete "class" }}
 
+<button id="download-button" data-files="unicorn.jpg rainbow.jpg">Download</button>
+
 {{ $built := resources.Get "js/download.js" }}
 <script type="text/javascript" src="{{ $built.RelPermalink }}"></script>
