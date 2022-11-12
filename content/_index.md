@@ -206,7 +206,7 @@ isSmtpJs: true
                 {{< div-download-form >}}
 
                 {{< div-download-button
-                    class="bg-[#078080] text-white text-[16px] lg:text-[20px]" btn-text="無料ダウンロードする"
+                    class="bg-[#078080] hover:text-[#078080] hover:bg-white border border-[#078080] text-white text-[16px] lg:text-[20px]" btn-text="無料ダウンロードする"
                 >}}
 
             {{< /div-container >}}
