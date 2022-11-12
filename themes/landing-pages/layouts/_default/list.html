@@ -1,7 +1,12 @@
 {{ define "main"}}
 
 <main>
+    
     {{ partial "organism/section.swiper.html" . }}
+    
+    {{ range (where .Site.RegularPages.ByWeight ".Params.isDownload" "eq" true) }}
+        {{ .Content }}
+    {{ end }}
 
     {{ range (where .Site.RegularPages.ByWeight ".Params.isChapter" "eq" true) }}
         {{ .Content }}
