@@ -29,6 +29,11 @@ weight: 1
             class="text-[16px] lg:text-[18px] leading-9"
         >}} 
     {{< /div-texts >}}
+
+    {{< div-download-button
+        class="bg-[#078080] text-white text-[16px] lg:text-[20px] mt-10 block" 
+        btn-text="資料ダウンロード"
+    >}}
 {{< /section >}}
 
 
