@@ -24,5 +24,8 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8",
     "tw-elements": "^1.0.0-alpha12"
+  },
+  "dependencies": {
+    "multi-download": "^4.0.0"
   }
 }
