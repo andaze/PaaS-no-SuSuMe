@@ -8,17 +8,17 @@ sections:
   path: content/_index.md
   label: home
 - type: directory
-  path: chapters
+  path: content/chapters
   label: chapters
   create: all
   match: "**/*"
 - type: directory
-  path: faq
+  path: content/faq
   label: faq
   create: all
   match: "**/*"
 - type: directory
-  path: key-visual
+  path: content/key-visual
   label: key-visual
   create: all
   match: "**/*"
