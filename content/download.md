@@ -10,16 +10,16 @@ weight: 1
     class="lg:text-center py-20 lg:py-40 px-2"
 >}}
     {{< header
-        class="mb-10 font-bold"
+        class="mb-14 font-bold"
     >}}
         {{< div-headerTexts
             title=""
             word1="従業員30名以上のリーズナブルなシステム開発"
             strong=""
             word2=""
-            title-class="mb-8"
-            text-class="text-[15px] lg:text-[40px]"
-            strong-class="text-[30px] lg:text-[56px]"
+            title-class=""
+            text-class="text-[15px] lg:text-[40px] relative before:content-[''] before:absolute before:inset-x-1/2 before:-translate-x-1/2 before:bottom-[-10px] before:h-1.5 before:w-8 before:bg-[#078080]"
+            strong-class=""
         >}}
     {{< /header >}}
 
