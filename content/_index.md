@@ -140,6 +140,7 @@ isSmtpJs: true
 
 {{< section
     class="py-20 lg:py-40 px-2"
+    id="download"
 >}}
     {{< header
         class="mb-10 font-bold lg:text-center"
