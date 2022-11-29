@@ -2,6 +2,7 @@ baseURL: 'http://example.org/'
 languageCode: 'ja-JP'
 theme: ['landing-pages', 'andaze']
 title: 'アンダーズ株式会社'
+googleAnalytics: G-KTKTNHZCFZ
 
 # [Configure Modules | Hugo](https://gohugo.io/hugo-modules/configuration/)
 module:
