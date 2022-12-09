@@ -47,7 +47,7 @@ weight: 3
                         class="text-[16px] lg:text-[18px] leading-9"
                     >}} 
                 {{< /div-texts >}}
-                {{< picture >}}
+                {{< picture alt="Image Not Available" src="images/data.png" type="content" quolity="100">}}
             {{< /div-grid-container >}}
 
             {{< div-container
