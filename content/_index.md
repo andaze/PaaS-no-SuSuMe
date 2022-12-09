@@ -193,7 +193,7 @@ isSmtpJs: true
                         class="text-[16px] lg:text-[18px] leading-9 mb-8"
                     >}} 
                 {{< /div-texts >}}
-                {{< picture alt="Image Not Available" src="images/ebook.png" type="content" quolity="100" class="w-2/3 mx-auto">}}
+                {{< picture alt="Image Not Available" src="images/ebook.jpg" type="content" quolity="100" class="w-2/3 mx-auto">}}
             {{< /div-grid-container >}}
 
             {{< div-container 
