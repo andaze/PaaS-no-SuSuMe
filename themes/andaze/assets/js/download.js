@@ -1,6 +1,9 @@
 import multiDownload from 'multi-download';
 
-document.querySelector('#download-button').addEventListener('click', event => {
-    const files = event.target.dataset.files.split(' ');
-    multiDownload(files);
-});
+const buttons = document.querySelectorAll('.download-button');
+buttons.forEach(button => {
+    button.addEventListener('click', event => {
+        const files = event.target.dataset.files.split(' ');
+        multiDownload(files);
+    });
+})
