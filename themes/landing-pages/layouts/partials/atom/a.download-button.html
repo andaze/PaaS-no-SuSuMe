@@ -3,7 +3,7 @@
 {{ .Scratch.Set "link" (.Get "link") }}
 {{ $link := .Scratch.Get "link" }}
 
-<a href="{{ $link }}" class="{{ $opt_class }} p-5 cursor-pointer" id="download-button" data-files="{{ "generic-crm-2023-1.pdf" | relURL }} {{ "paas-2022.pdf" | relURL }}">無料ダウンロードする</a>
+<a href="{{ $link }}" class="{{ $opt_class }} p-5 cursor-pointer download-button" data-files="{{ "generic-crm-2023-1.pdf" | relURL }} {{ "paas-2022.pdf" | relURL }}">無料ダウンロードする</a>
 
 {{ .Scratch.Delete "link" }}
 {{ .Scratch.Delete "class" }}
