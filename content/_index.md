@@ -1,5 +1,5 @@
 ---
-title: Paas No Susume
+title: PaaS No Susume
 date: 2022-10-11T11:28:42.000+09:00
 draft: false
 isSmtpJs: true
