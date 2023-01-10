@@ -23,25 +23,25 @@
                         bodyMain = bodyMain.concat(name, " : <br/>", value, "<br/><br/>");
                     }
                 }
-                if (form.classList.contains('download')) {
-                    subject = '{{- .Site.Params.smtpjs.messagesDownload.subject -}}';
-                    alertMessage = '{{- .Site.Params.smtpjs.messagesDownload.alert -}}';
-                    bodyHeader = '{{- .Site.Params.smtpjs.messagesDownload.bodyHeader -}}';
-                    bodyFooter = '{{- .Site.Params.smtpjs.messagesDownload.bodyFooter -}}';
-                } else {
-                    subject = '{{- .Site.Params.smtpjs.messagesContact.subject -}}';
-                    alertMessage = '{{- .Site.Params.smtpjs.messagesContact.alert -}}';
-                    bodyHeader = '{{- .Site.Params.smtpjs.messagesContact.bodyHeader -}}';
-                    bodyFooter = '{{- .Site.Params.smtpjs.messagesContact.bodyFooter -}}';
-                }
+
+                // ダウンロードの場合とお問い合わせの場合でメッセージを出し分け
+                subject = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.subject -}}' : '{{- .Site.Params.smtpjs.messagesContact.subject -}}';
+                alertMessage = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.alert -}}' : '{{- .Site.Params.smtpjs.messagesContact.alert -}}';
+                bodyHeader = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.bodyHeader -}}' : '{{- .Site.Params.smtpjs.messagesContact.bodyHeader -}}';
+                bodyFooter = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.bodyFooter -}}' : '{{- .Site.Params.smtpjs.messagesContact.bodyFooter -}}';
+
                 submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage);
             })
         });
 
         function submitted(to_email, body, dialog_message) {
+
+            // ダウンロードの場合とお問い合わせの場合でメールの送信先を変更
+            let toMail = form.classList.contains('download') ? toMail = fromMail : toMail = to_email;
+
             const email = Email.send({
                 SecureToken: secureToken,
-                To: to_email,
+                To: toMail,
                 From: fromMail,
                 Bcc: bccMail,
                 Subject: subject,
@@ -50,7 +50,7 @@
                 message => {
                     alert(dialog_message)
                 }
-            );
+            )
         }
 
     })();
