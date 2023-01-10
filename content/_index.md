@@ -201,7 +201,7 @@ isSmtpJs: true
             >}}
 
                 {{< form-wrapper
-                    class="download-form"
+                    class="download-form download"
                 >}}
                     {{< div-download-form >}}
 

@@ -30,18 +30,15 @@
                 bodyHeader = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.bodyHeader -}}' : '{{- .Site.Params.smtpjs.messagesContact.bodyHeader -}}';
                 bodyFooter = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.bodyFooter -}}' : '{{- .Site.Params.smtpjs.messagesContact.bodyFooter -}}';
 
-                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage);
+                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage, form);
             })
         });
 
-        function submitted(to_email, body, dialog_message) {
-
-            // ダウンロードの場合とお問い合わせの場合でメールの送信先を変更
-            let toMail = form.classList.contains('download') ? toMail = fromMail : toMail = to_email;
+        function submitted(to_email, body, dialog_message, form) {
 
             const email = Email.send({
                 SecureToken: secureToken,
-                To: toMail,
+                To: to_email,
                 From: fromMail,
                 Bcc: bccMail,
                 Subject: subject,
