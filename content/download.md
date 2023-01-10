@@ -31,8 +31,10 @@ weight: 1
     {{< /div-texts >}}
 
     {{< div-download-button
-        class="bg-[#078080] hover:text-[#078080] hover:bg-white border border-[#078080] text-white text-[16px] lg:text-[20px] mt-10 block" link="#download" 
+        class="bg-[#078080] hover:text-[#078080] hover:bg-white border border-[#078080] text-white text-[16px] lg:text-[20px] mt-10 block" 
         btn-text="資料ダウンロード"
+        link="#download" 
+        file="PaaSのススメ.zip"
     >}}
 {{< /section >}}
 

@@ -1,0 +1,8 @@
+{{ .Scratch.Set "class" (.Get "class") }}
+{{ $opt_class := .Scratch.Get "class" }}
+
+<form class="smtpjs-form {{ $opt_class }}">
+    {{ .Inner }} 
+</form>
+
+{{ .Scratch.Delete "class" }}
