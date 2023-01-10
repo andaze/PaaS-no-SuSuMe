@@ -26,11 +26,16 @@ params:
     secureToken: 22152f6c-a021-4af1-90d4-cd093adb07c0 # dev,localhost
     fromMail: "contact@andaze.com"
     bccMail: "nishidai@andaze.com,contact-us@andaze.com,contact-us@andaze.com,d@solutus.jp"
-    subject: "お問い合わせいただきありがとうございます。"
-    confirmMessage:
+    messagesContact:
+      subject: "お問い合わせいただきありがとうございます。"
       alert: "お問い合わせいただきありがとうざいます。"
       bodyHeader: "お問い合わせいただきありがとうざいます。"
       bodyFooter: "上記の内容にてお問い合わせを受け付けました。<br/>追って担当者から回答させていただきます。"
+    messagesDownload:
+      subject: "ダウンロードいただきありがとうざいます。"
+      alert: "ダウンロードいただきありがとうざいます。"
+      bodyHeader: "ダウンロードいただきありがとうざいます。"
+      bodyFooter: "今後とも「PaaSのススメ」をよろしくお願いいたします。"
   navigation:
     - text: "個人情報保護方針"
       link: "https://andaze.com/ja/privacy-policy/"
