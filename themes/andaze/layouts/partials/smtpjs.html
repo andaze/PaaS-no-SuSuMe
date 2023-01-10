@@ -8,10 +8,7 @@
         const adminMail = '{{- .Site.Params.smtpjs.adminMail | default false -}}';
         const bccMail = '{{- .Site.Params.smtpjs.bccMail | default false -}}';
         const fromMail = '{{- .Site.Params.smtpjs.fromMail | default false -}}';
-        const subject = '{{- .Site.Params.smtpjs.subject -}}';
-        const alertMessage = '{{- .Site.Params.smtpjs.confirmMessage.alert -}}';
-        const bodyHeader = '{{- .Site.Params.smtpjs.confirmMessage.bodyHeader -}}';
-        const bodyFooter = '{{- .Site.Params.smtpjs.confirmMessage.bodyFooter -}}';
+        let subject, alertMessage, bodyHeader, bodyFooter;
 
         forms.forEach(function (form) {
             form.addEventListener("submit", function (e) {
@@ -26,11 +23,22 @@
                         bodyMain = bodyMain.concat(name, " : <br/>", value, "<br/><br/>");
                     }
                 }
-                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`);
+                if (form.classList.contains('download')) {
+                    subject = '{{- .Site.Params.smtpjs.messagesDownload.subject -}}';
+                    alertMessage = '{{- .Site.Params.smtpjs.messagesDownload.alert -}}';
+                    bodyHeader = '{{- .Site.Params.smtpjs.messagesDownload.bodyHeader -}}';
+                    bodyFooter = '{{- .Site.Params.smtpjs.messagesDownload.bodyFooter -}}';
+                } else {
+                    subject = '{{- .Site.Params.smtpjs.messagesContact.subject -}}';
+                    alertMessage = '{{- .Site.Params.smtpjs.messagesContact.alert -}}';
+                    bodyHeader = '{{- .Site.Params.smtpjs.messagesContact.bodyHeader -}}';
+                    bodyFooter = '{{- .Site.Params.smtpjs.messagesContact.bodyFooter -}}';
+                }
+                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage);
             })
         });
 
-        function submitted(to_email, body) {
+        function submitted(to_email, body, dialog_message) {
             const email = Email.send({
                 SecureToken: secureToken,
                 To: to_email,
@@ -40,7 +48,7 @@
                 Body: body,
             }).then(
                 message => {
-                    alert(alertMessage)
+                    alert(dialog_message)
                 }
             );
         }
