@@ -8,10 +8,7 @@
         const adminMail = '{{- .Site.Params.smtpjs.adminMail | default false -}}';
         const bccMail = '{{- .Site.Params.smtpjs.bccMail | default false -}}';
         const fromMail = '{{- .Site.Params.smtpjs.fromMail | default false -}}';
-        const subject = '{{- .Site.Params.smtpjs.subject -}}';
-        const alertMessage = '{{- .Site.Params.smtpjs.confirmMessage.alert -}}';
-        const bodyHeader = '{{- .Site.Params.smtpjs.confirmMessage.bodyHeader -}}';
-        const bodyFooter = '{{- .Site.Params.smtpjs.confirmMessage.bodyFooter -}}';
+        let subject, alertMessage, bodyHeader, bodyFooter;
 
         forms.forEach(function (form) {
             form.addEventListener("submit", function (e) {
@@ -26,11 +23,19 @@
                         bodyMain = bodyMain.concat(name, " : <br/>", value, "<br/><br/>");
                     }
                 }
-                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`);
+
+                // ダウンロードの場合とお問い合わせの場合でメッセージを出し分け
+                subject = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.subject -}}' : '{{- .Site.Params.smtpjs.messagesContact.subject -}}';
+                alertMessage = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.alert -}}' : '{{- .Site.Params.smtpjs.messagesContact.alert -}}';
+                bodyHeader = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.bodyHeader -}}' : '{{- .Site.Params.smtpjs.messagesContact.bodyHeader -}}';
+                bodyFooter = form.classList.contains('download') ? '{{- .Site.Params.smtpjs.messagesDownload.bodyFooter -}}' : '{{- .Site.Params.smtpjs.messagesContact.bodyFooter -}}';
+
+                submitted(toEmail, `${bodyHeader}<br/>${bodyMain}<br/>${bodyFooter}`, alertMessage, form);
             })
         });
 
-        function submitted(to_email, body) {
+        function submitted(to_email, body, dialog_message, form) {
+
             const email = Email.send({
                 SecureToken: secureToken,
                 To: to_email,
@@ -40,9 +45,9 @@
                 Body: body,
             }).then(
                 message => {
-                    alert(alertMessage)
+                    alert(dialog_message)
                 }
-            );
+            )
         }
 
     })();

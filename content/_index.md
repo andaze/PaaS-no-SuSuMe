@@ -200,13 +200,18 @@ isSmtpJs: true
                 class="bg-gray-100 pt-10 pb-20"
             >}}
 
-                {{< div-download-form >}}
-
-                {{< div-download-button
-                    class="bg-[#078080] hover:text-[#078080] hover:bg-white border border-[#078080] text-white text-[16px] lg:text-[20px]" 
-                    link="#download"
-                    btn-text="無料ダウンロードする"
+                {{< form-wrapper
+                    class="download-form download"
                 >}}
+                    {{< div-download-form >}}
+
+                    {{< div-download-button
+                        class="bg-[#078080] hover:text-[#078080] hover:bg-white border border-[#078080] text-white text-[16px] lg:text-[20px] with-form" 
+                        btn-text="無料ダウンロードする"
+                        link="#download"
+                        file="PaaSのススメ.zip"
+                    >}}
+                {{< /form-wrapper >}}
 
             {{< /div-container >}}
 
