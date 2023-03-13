@@ -3,6 +3,7 @@ languageCode: 'ja-JP'
 theme: ['landing-pages', 'andaze']
 title: 'アンダーズ株式会社'
 googleAnalytics: G-KTKTNHZCFZ
+timeout: 180s
 
 # [Configure Modules | Hugo](https://gohugo.io/hugo-modules/configuration/)
 module:
